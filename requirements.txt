@@ -1,0 +1,21 @@
+# 图像识别库
+opencv-python==4.8.1.78
+Pillow==10.0.1
+numpy==1.24.3
+
+# Windows输入控制库
+pyautogui==0.9.54
+pywin32==306
+pywinauto==0.6.0
+pydirectinput==1.0.4
+
+# 其他辅助库
+pynput==1.7.6
+psutil==5.9.5
+mss==6.1.0
+
+# 配置文件处理
+pyyaml==6.0.1
+
+# 日志记录
+loguru==0.7.2

@@ -1,0 +1,46 @@
+# DNAAS 游戏自动脚本系统配置文件
+
+# 屏幕捕获配置
+screen:
+  use_delay: true  # 是否使用屏幕捕获延迟
+  capture_interval: 0.1  # 屏幕捕获间隔(秒)
+  region: null  # 捕获区域，null表示全屏，格式: [x1, y1, x2, y2]
+  resolution: [1280, 720]  # 屏幕分辨率
+  
+# 图像识别配置
+recognition:
+  threshold: 0.8  # 图像匹配阈值(0-1)
+  method: "cv2.TM_CCOEFF_NORMED"  # 匹配方法
+  template_dir: "assets/templates"  # 模板图像目录
+  
+# 输入控制配置
+input:
+  overlimit_detection: false  # 是否开启超量识别检测
+  use_delay: true  # 是否使用输入延迟
+  delay: 0.05  # 输入延迟(秒)
+  move_duration: 0.2  # 鼠标移动持续时间(秒)
+  click_duration: 0.1  # 鼠标点击持续时间(秒)
+  key_duration: 0.05  # 按键持续时间(秒)
+  
+# 日志配置
+logging:
+  level: "INFO"  # 日志级别: DEBUG, INFO, WARNING, ERROR
+  file: "logs/dnaas.log"  # 日志文件路径
+  rotation: "10 MB"  # 日志文件轮转大小
+  
+# 游戏特定配置
+game:
+  name: "示例游戏"  # 游戏名称
+  window_title: ""  # 游戏窗口标题(用于窗口检测)
+  process_name: ""  # 游戏进程名(用于进程检测)
+  
+# 脚本配置
+script:
+  auto_start: false  # 是否自动启动脚本
+  script_file: "scripts/example.py"  # 默认脚本文件
+  
+# 性能配置
+performance:
+  max_cpu_usage: 50  # 最大CPU使用率(%)
+  max_memory_usage: 1024  # 最大内存使用量(MB)
+  thread_pool_size: 4  # 线程池大小
