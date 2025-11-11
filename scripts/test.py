@@ -57,37 +57,12 @@ class MyGameScript(BaseGameScript):
         游戏逻辑，子类必须实现此方法
         """
         
-            # 判断当前轮次是否完成
+        # # 点击 开始挑战 按钮 
         logger.info(self.game_ops.appear(
-            "mod\\entrust\\efficiency_props\\default_choice_2.png",  # 模板名称
-            timeout=5,        # 超时时间(秒)
-            threshold=0.8,    # 匹配阈值
+            "mod\\general\\again.png",  # 模板名称
+            timeout=10,        # 超时时间(秒)
+            threshold=0.6,    # 匹配阈值
         ))
-        logger.info(self.game_ops.appear(
-            "mod\\entrust\\efficiency_props\\choice_1.png",  # 模板名称
-            timeout=5,        # 超时时间(秒)
-            threshold=0.8,    # 匹配阈值
-        ))
-        logger.info(self.game_ops.appear(
-            "mod\\entrust\\efficiency_props\\choice_2.png",  # 模板名称
-            timeout=5,        # 超时时间(秒)
-            threshold=0.8,    # 匹配阈值
-        ))
-        logger.info(self.game_ops.appear(
-            "mod\\entrust\\efficiency_props\\choice_3.png",  # 模板名称
-            timeout=5,        # 超时时间(秒)
-            threshold=0.8,    # 匹配阈值
-        ))
-
-        # 点击 788 547
-
-        self.input_controller.click(
-            x=self.game_window_rect['left']+ int(788/1920*self.game_window_rect['width']), 
-            y=self.game_window_rect['top']+ int(580/1080*self.game_window_rect['height']),
-            button='left', 
-            clicks=1
-        )
-                
 
 
     

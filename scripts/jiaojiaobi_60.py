@@ -283,20 +283,14 @@ class MyGameScript(BaseGameScript):
  
         
 
-        # 点击再次进行 1386/1920 952/1080
-        # self.game_ops.appear_then_click(
-        #     "mod\\general\\again.png",  # 模板名称
-        #     timeout=150,        # 超时时间(秒)
-        #     threshold=0.8,    # 匹配阈值
-        #     click_delay=5   # 点击后延迟
-        # )
-        time.sleep(2)
-        self.input_controller.click(
-            x=self.game_window_rect['left']+ int(1386/1920*self.game_window_rect['width']), 
-            y=self.game_window_rect['top']+ int(952/1080*self.game_window_rect['height']),
-            button='left', 
-            clicks=2
+        # 点击再次进行 
+        self.game_ops.appear_then_click(
+            "mod\\general\\again.png",  # 模板名称
+            timeout=150,        # 超时时间(秒)
+            threshold=0.6,    # 匹配阈值
+            click_delay=5   # 点击后延迟
         )
+
         
 
         # 点击 开始挑战 按钮 
