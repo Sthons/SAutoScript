@@ -61,16 +61,11 @@ class MyGameScript(BaseGameScript):
 
         # 判断起点类型
         spawn_check_result = self.game_ops.appear(
-            "mod\\entrust\\letter_clues\\spawn1.png",  # 起点 1
+            "mod\\entrust\\letter_clues\\spawn2.png",  # 起点 1
             timeout=5,        # 超时时间(秒)
-            threshold=0.7,    # 匹配阈值
+            threshold=0.8,    # 匹配阈值
         )
-        if not spawn_check_result.get('found', False):
-            spawn_check_result = self.game_ops.appear(
-                "mod\\entrust\\letter_clues\\spawn2.png",  # 起点 2
-                timeout=5,        # 超时时间(秒)
-                threshold=0.7,    # 匹配阈值
-            )
+        if spawn_check_result.get('found', False):
 
             logger.info("已确认当前区域为起点 2")
 
@@ -97,9 +92,7 @@ class MyGameScript(BaseGameScript):
             # 松开 a 键 停止向左移动
             self.input_controller.key_press('f', random.randint(5, 9), 0.03)
 
-        
-
-            round = 12
+            round = 6
 
             for num in range(round):
                 # 判断当前轮次是否完成

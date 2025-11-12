@@ -61,201 +61,193 @@ class MyGameScript(BaseGameScript):
 
         # 判断起点类型
         spawn_check_result = self.game_ops.appear(
-            "mod\\entrust\\jiaojiaobi\\level60\\spawn1.png",  # 模板名称
+            "mod\\entrust\\jiaojiaobi\\level60\\spawn2.png",  # 模板名称
             timeout=5,        # 超时时间(秒)
             threshold=0.7,    # 匹配阈值
         )
-        if not spawn_check_result.get('found', False):
-            spawn_check_result = self.game_ops.appear(
-                "mod\\entrust\\jiaojiaobi\\level60\\spawn2.png",  # 模板名称
-                timeout=5,        # 超时时间(秒)
-                threshold=0.7,    # 匹配阈值
+        if spawn_check_result.get('found', False):
+
+            logger.info("已确认当前区域为起点 2")
+
+
+            # 向右移动视角 60°
+            self.input_controller.move_mouse(x + 300, y)
+
+            self.input_controller.key_down('w')
+            self.input_controller.key_down('shift') 
+            time.sleep(0.3)
+
+            # 设置鼠标位置到游戏窗口中心
+            self.input_controller.set_mouse_position(x, y)
+            # 点击鼠标中键 重置鼠标信号
+            self.input_controller.click(button='middle')
+            time.sleep(0.1)
+            # 视角回正
+            self.input_controller.move_mouse(x - 300, y)
+
+            time.sleep(6.5)
+
+            # 设置鼠标位置到游戏窗口中心
+            self.input_controller.set_mouse_position(x, y)
+            # 点击鼠标中键 重置鼠标信号
+            self.input_controller.click(button='middle')
+            time.sleep(0.1)
+            # 向左移动视角 30°
+            self.input_controller.move_mouse(x - 300, y)
+
+            time.sleep(1)
+
+
+            # 设置鼠标位置到游戏窗口中心
+            self.input_controller.set_mouse_position(x, y)
+            # 点击鼠标中键 重置鼠标信号
+            self.input_controller.click(button='middle')
+            time.sleep(0.1)
+            # 向右移动视角 30°
+            self.input_controller.move_mouse(x + 300, y)        
+
+            time.sleep(0.5)
+
+            # 松开 w + shift 组合键
+            self.input_controller.key_up('shift') 
+            self.input_controller.key_up('w')
+
+
+            # 判断是否是 关卡 2-1
+            level_2_check_result = self.game_ops.appear(
+                "mod\\entrust\\jiaojiaobi\\level60\\level_2_1.png",  # 模板名称
+                timeout=3,        # 超时时间(秒)
+                threshold=0.6,    # 匹配阈值
             )
-            if not spawn_check_result.get('found', False):
-                logger.error("未找到目标图片")
-                return
-            else:
-                logger.info("已确认当前区域为起点 2")
 
+            level2_type = 1
 
-                # 向右移动视角 60°
-                self.input_controller.move_mouse(x + 300, y)
-
-                self.input_controller.key_down('w')
-                self.input_controller.key_down('shift') 
-                time.sleep(0.3)
-
-                # 设置鼠标位置到游戏窗口中心
-                self.input_controller.set_mouse_position(x, y)
-                # 点击鼠标中键 重置鼠标信号
-                self.input_controller.click(button='middle')
-                time.sleep(0.1)
-                # 视角回正
-                self.input_controller.move_mouse(x - 300, y)
-
-                time.sleep(6.5)
-
-                # 设置鼠标位置到游戏窗口中心
-                self.input_controller.set_mouse_position(x, y)
-                # 点击鼠标中键 重置鼠标信号
-                self.input_controller.click(button='middle')
-                time.sleep(0.1)
-                # 向左移动视角 30°
-                self.input_controller.move_mouse(x - 300, y)
-
-                time.sleep(1)
-
-
-                # 设置鼠标位置到游戏窗口中心
-                self.input_controller.set_mouse_position(x, y)
-                # 点击鼠标中键 重置鼠标信号
-                self.input_controller.click(button='middle')
-                time.sleep(0.1)
-                # 向右移动视角 30°
-                self.input_controller.move_mouse(x + 300, y)        
-
-                time.sleep(0.5)
-
-                # 松开 w + shift 组合键
-                self.input_controller.key_up('shift') 
-                self.input_controller.key_up('w')
-
-
-                # 判断是否是 关卡 2-1
-                level_2_check_result = self.game_ops.appear(
-                    "mod\\entrust\\jiaojiaobi\\level60\\level_2_1.png",  # 模板名称
+            if not level_2_check_result.get('found', False):
+                _level_2_check_result = self.game_ops.appear(
+                    "mod\\entrust\\jiaojiaobi\\level60\\level_2_1t2.png",  # 模板名称
                     timeout=3,        # 超时时间(秒)
                     threshold=0.6,    # 匹配阈值
                 )
-
-                level2_type = 1
-
-                if not level_2_check_result.get('found', False):
-                    _level_2_check_result = self.game_ops.appear(
-                        "mod\\entrust\\jiaojiaobi\\level60\\level_2_1t2.png",  # 模板名称
-                        timeout=3,        # 超时时间(秒)
-                        threshold=0.6,    # 匹配阈值
-                    )
-                    if not _level_2_check_result.get('found', False): 
-                        level2_type = 2
-                    else:
-                        self.input_controller.key_press('a', 3)
-                
-
-                if level2_type == 1:
-                    logger.info("已确认当前区域为关卡 2_1")
-                    self.input_controller.key_down('w')
-                    self.input_controller.key_down('shift') 
-                    time.sleep(22)
-                    self.input_controller.key_up('shift') 
-                    self.input_controller.key_up('w')
+                if not _level_2_check_result.get('found', False): 
+                    level2_type = 2
                 else:
-                    logger.info("已确认当前区域为关卡 2_2")
-                    self.input_controller.key_down('w')
-                    self.input_controller.key_down('shift') 
-                    time.sleep(1.8)
+                    self.input_controller.key_press('a', 3)
+            
 
-                    # 设置鼠标位置到游戏窗口中心
-                    self.input_controller.set_mouse_position(x, y)
-                    # 点击鼠标中键 重置鼠标信号
-                    self.input_controller.click(button='middle')
-                    time.sleep(0.1)
-                    # 向左移动视角 45°
-                    self.input_controller.move_mouse(x - 240, y)
+            if level2_type == 1:
+                logger.info("已确认当前区域为关卡 2_1")
+                self.input_controller.key_down('w')
+                self.input_controller.key_down('shift') 
+                time.sleep(22)
+                self.input_controller.key_up('shift') 
+                self.input_controller.key_up('w')
+            else:
+                logger.info("已确认当前区域为关卡 2_2")
+                self.input_controller.key_down('w')
+                self.input_controller.key_down('shift') 
+                time.sleep(1.8)
 
-                    time.sleep(2.5)
+                # 设置鼠标位置到游戏窗口中心
+                self.input_controller.set_mouse_position(x, y)
+                # 点击鼠标中键 重置鼠标信号
+                self.input_controller.click(button='middle')
+                time.sleep(0.1)
+                # 向左移动视角 45°
+                self.input_controller.move_mouse(x - 240, y)
 
-                    # 设置鼠标位置到游戏窗口中心
-                    self.input_controller.set_mouse_position(x, y)
-                    # 点击鼠标中键 重置鼠标信号
-                    self.input_controller.click(button='middle')
-                    time.sleep(0.1)
-                    # 向右移动视角 45°
-                    self.input_controller.move_mouse(x + 240, y)
-                    
-                    time.sleep(15.5)
-                    self.input_controller.key_up('shift') 
-                    self.input_controller.key_up('w')
+                time.sleep(2.5)
 
-                time.sleep(10)
+                # 设置鼠标位置到游戏窗口中心
+                self.input_controller.set_mouse_position(x, y)
+                # 点击鼠标中键 重置鼠标信号
+                self.input_controller.click(button='middle')
+                time.sleep(0.1)
+                # 向右移动视角 45°
+                self.input_controller.move_mouse(x + 240, y)
+                
+                time.sleep(15.5)
+                self.input_controller.key_up('shift') 
+                self.input_controller.key_up('w')
 
-                # 插入 默认 随机事件
-                self.random_event()
+            time.sleep(10)
 
-                time.sleep(10)
+            # 插入 默认 随机事件
+            self.random_event()
 
-                # 插入 默认 随机事件
-                self.random_event()
+            time.sleep(10)
 
-                # 用 二命 赛琪时额外按下q键
-                self.input_controller.key_press('q')
+            # 插入 默认 随机事件
+            self.random_event()
 
-                round = 3
+            # 用 二命 赛琪时额外按下q键
+            self.input_controller.key_press('q')
 
-                for num in range(round):
-                    # 判断当前轮次是否完成
-                    if not self.game_ops.appear_then_click(
-                        "mod\\general\\choice.png",  # 模板名称
-                        timeout=180,        # 超时时间(秒)
-                        threshold=0.7,    # 匹配阈值
+            round = 3
+
+            for num in range(round):
+                # 判断当前轮次是否完成
+                if not self.game_ops.appear_then_click(
+                    "mod\\general\\choice.png",  # 模板名称
+                    timeout=180,        # 超时时间(秒)
+                    threshold=0.7,    # 匹配阈值
+                    click_delay=3   # 点击后延迟
+                ):
+                    # 卡关
+                    # 输入 esc 呼出菜单
+                    self.input_controller.key_press('esc')
+
+                    # 点击放弃挑战
+                    self.game_ops.appear_then_click(
+                        "mod\\pause\\give_up_the_challenge.png",  # 模板名称
+                        timeout=5,        # 超时时间(秒)
+                        threshold=0.8,    # 匹配阈值
                         click_delay=3   # 点击后延迟
-                    ):
-                        # 卡关
-                        # 输入 esc 呼出菜单
-                        self.input_controller.key_press('esc')
+                    )
 
-                        # 点击放弃挑战
+                    # 在出现的弹窗中点击确定
+                    self.game_ops.appear_then_click(
+                        "mod\\general\\entry.png",  # 模板名称
+                        timeout=5,        # 超时时间(秒)
+                        threshold=0.8,    # 匹配阈值
+                        click_delay=5   # 点击后延迟
+                    )
+                    
+                    break
+
+                else:
+                    self.success_num += 1
+                    if num < round - 1:
                         self.game_ops.appear_then_click(
-                            "mod\\pause\\give_up_the_challenge.png",  # 模板名称
+                            "mod\\general\\keep_going.png",  # 模板名称
                             timeout=5,        # 超时时间(秒)
                             threshold=0.8,    # 匹配阈值
-                            click_delay=3   # 点击后延迟
+                            click_delay=random.randint(2, 6)   # 点击后延迟
                         )
+                        if num == round - 2:
+                            
+                            # 使用 委托手册·一
+                            self.input_controller.click(
+                                x=self.game_window_rect['left']+ int(788/1920*self.game_window_rect['width']), 
+                                y=self.game_window_rect['top']+ int(580/1080*self.game_window_rect['height']),
+                                button='left', 
+                                clicks=1
+                            )
 
-                        # 在出现的弹窗中点击确定
+
                         self.game_ops.appear_then_click(
-                            "mod\\general\\entry.png",  # 模板名称
+                            "mod\\general\\raid_start.png",  # 模板名称
                             timeout=5,        # 超时时间(秒)
-                            threshold=0.8,    # 匹配阈值
-                            click_delay=5   # 点击后延迟
+                            threshold=0.6,    # 匹配阈值
+                            click_delay=random.randint(2, 6)   # 点击后延迟
                         )
-                        
-                        break
 
                     else:
-                        self.success_num += 1
-                        if num < round - 1:
-                            self.game_ops.appear_then_click(
-                                "mod\\general\\keep_going.png",  # 模板名称
-                                timeout=5,        # 超时时间(秒)
-                                threshold=0.8,    # 匹配阈值
-                                click_delay=random.randint(2, 6)   # 点击后延迟
-                            )
-                            if num == round - 2:
-                                
-                                # 使用 委托手册·一
-                                self.input_controller.click(
-                                    x=self.game_window_rect['left']+ int(788/1920*self.game_window_rect['width']), 
-                                    y=self.game_window_rect['top']+ int(580/1080*self.game_window_rect['height']),
-                                    button='left', 
-                                    clicks=1
-                                )
-
-
-                            self.game_ops.appear_then_click(
-                                "mod\\general\\raid_start.png",  # 模板名称
-                                timeout=5,        # 超时时间(秒)
-                                threshold=0.6,    # 匹配阈值
-                                click_delay=random.randint(2, 6)   # 点击后延迟
-                            )
-
-                        else:
-                            self.game_ops.appear_then_click(
-                                "mod\\general\\runaway.png",  # 模板名称
-                                timeout=5,        # 超时时间(秒)
-                                threshold=0.8,    # 匹配阈值
-                                click_delay=random.randint(2, 6)   # 点击后延迟
-                            )
+                        self.game_ops.appear_then_click(
+                            "mod\\general\\runaway.png",  # 模板名称
+                            timeout=5,        # 超时时间(秒)
+                            threshold=0.8,    # 匹配阈值
+                            click_delay=random.randint(2, 6)   # 点击后延迟
+                        )
 
         else:
                 logger.info("已确认当前区域为起点 1")

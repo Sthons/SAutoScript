@@ -58,11 +58,18 @@ class MyGameScript(BaseGameScript):
         """
         
         # # 点击 开始挑战 按钮 
-        logger.info(self.game_ops.appear(
-            "mod\\general\\again.png",  # 模板名称
-            timeout=10,        # 超时时间(秒)
-            threshold=0.6,    # 匹配阈值
-        ))
+        # logger.info(self.game_ops.appear(
+        #     "mod\\general\\runaway.png",  # 模板名称
+        #     timeout=10,        # 超时时间(秒)
+        #     threshold=0.8,    # 匹配阈值
+        # ))
+
+        self.game_ops.appear_then_click(
+            "mod\\general\\runaway.png",  # 模板名称
+            timeout=5,        # 超时时间(秒)
+            threshold=0.8,    # 匹配阈值
+            click_delay=random.randint(2, 6)   # 点击后延迟
+        )
 
 
     
