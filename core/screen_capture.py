@@ -21,17 +21,38 @@ class ScreenCapture:
         self.use_delay = self.config.get("use_delay", True)  # 是否使用延迟，默认使用
         self.delay = self.config.get("capture_delay", 0.01)  # 默认延迟0.01秒
         
+        # 截图方法配置
+        self.capture_method = self.config.get("capture_method", "mss")  # 默认使用mss
+        
         # 质量设置
         self.quality = self.config.get("quality", "medium")  # 默认中等质量
         self._setup_quality_settings()
         
-        # 初始化mss对象
-        self.sct = mss.mss()
+        # 根据截图方法初始化相应的对象
+        self._init_capture_method()
         
         # 设置捕获区域
         self._setup_capture_region()
         
-        logger.info(f"屏幕捕获初始化完成，捕获区域: {self.monitor}, 质量设置: {self.quality}")
+        logger.info(f"屏幕捕获初始化完成，捕获方法: {self.capture_method}，捕获区域: {self.monitor}，质量设置: {self.quality}")
+    
+    def _init_capture_method(self):
+        """根据配置的截图方法初始化相应的对象"""
+        if self.capture_method == "mss":
+            self.sct = mss.mss()
+            logger.info("使用mss库进行屏幕捕获")
+        elif self.capture_method == "pil":
+            # PIL方式不需要特殊初始化
+            logger.info("使用PIL库进行屏幕捕获")
+        elif self.capture_method == "pyautogui":
+            import pyautogui
+            # 禁用pyautogui的安全检查
+            pyautogui.FAILSAFE = False
+            logger.info("使用pyautogui库进行屏幕捕获")
+        else:
+            logger.warning(f"未知的截图方法: {self.capture_method}，默认使用mss")
+            self.capture_method = "mss"
+            self.sct = mss.mss()
     
     def _setup_quality_settings(self):
         """根据质量设置调整参数"""
@@ -55,55 +76,100 @@ class ScreenCapture:
         """设置捕获区域"""
         if self.region is None:
             # 全屏捕获
-            self.monitor = self.sct.monitors[self.sct_monitor]  # 显示器
+            if self.capture_method == "mss":
+                self.monitor = self.sct.monitors[self.sct_monitor]  # 显示器
+            else:
+                # PIL和pyautogui不需要设置monitor对象
+                self.monitor = None
         else:
             # 指定区域捕获
-            x1, y1, x2, y2 = self.region
-            self.monitor = {
-                "top": y1,
-                "left": x1,
-                "width": x2 - x1,
-                "height": y2 - y1
-            }
+            if self.capture_method == "mss":
+                x1, y1, x2, y2 = self.region
+                self.monitor = {
+                    "top": y1,
+                    "left": x1,
+                    "width": x2 - x1,
+                    "height": y2 - y1
+                }
+            else:
+                # PIL和pyautogui直接使用region参数
+                self.monitor = None
     
     def capture(self, as_numpy=True):
         """捕获屏幕"""
         try:
-            # 使用mss捕获屏幕
-            screenshot = self.sct.grab(self.monitor)
+            screenshot = None
             
-            if as_numpy:
-                # 转换为numpy数组
-                img = np.array(screenshot)
-                # mss返回的是BGRA格式，转换为BGR
-                img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
+            if self.capture_method == "mss":
+                # 使用mss捕获屏幕
+                screenshot = self.sct.grab(self.monitor)
                 
-                # 根据质量设置调整分辨率
-                if self.scale_factor != 1.0:
+                if as_numpy:
+                    # 转换为numpy数组
+                    img = np.array(screenshot)
+                    # mss返回的是BGRA格式，转换为BGR
+                    img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
+                else:
+                    # 返回PIL图像
+                    img = Image.frombytes("RGB", screenshot.size, screenshot.rgb)
+                    
+            elif self.capture_method == "pil":
+                # 使用PIL ImageGrab捕获屏幕
+                from PIL import ImageGrab
+                
+                if self.region is None:
+                    # 全屏捕获
+                    screenshot = ImageGrab.grab()
+                else:
+                    # 区域捕获
+                    x1, y1, x2, y2 = self.region
+                    screenshot = ImageGrab.grab(bbox=(x1, y1, x2, y2))
+                
+                if as_numpy:
+                    # 转换为numpy数组
+                    img = np.array(screenshot)
+                    # PIL返回的是RGB格式，转换为BGR
+                    img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+                else:
+                    img = screenshot
+                    
+            elif self.capture_method == "pyautogui":
+                # 使用pyautogui捕获屏幕
+                import pyautogui
+                
+                if self.region is None:
+                    # 全屏捕获
+                    screenshot = pyautogui.screenshot()
+                else:
+                    # 区域捕获
+                    x1, y1, x2, y2 = self.region
+                    screenshot = pyautogui.screenshot(region=(x1, y1, x2-x1, y2-y1))
+                
+                if as_numpy:
+                    # 转换为numpy数组
+                    img = np.array(screenshot)
+                    # pyautogui返回的是RGB格式，转换为BGR
+                    img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+                else:
+                    img = screenshot
+            
+            # 根据质量设置调整分辨率
+            if self.scale_factor != 1.0:
+                if as_numpy:
                     new_width = int(img.shape[1] * self.scale_factor)
                     new_height = int(img.shape[0] * self.scale_factor)
                     img = cv2.resize(img, (new_width, new_height), interpolation=cv2.INTER_AREA)
-                
-                # 根据配置添加延迟
-                if self.use_delay:
-                    time.sleep(self.delay)
-                
-                return img
-            else:
-                # 返回PIL图像
-                pil_img = Image.frombytes("RGB", screenshot.size, screenshot.rgb)
-                
-                # 根据质量设置调整分辨率
-                if self.scale_factor != 1.0:
-                    new_width = int(pil_img.width * self.scale_factor)
-                    new_height = int(pil_img.height * self.scale_factor)
-                    pil_img = pil_img.resize((new_width, new_height), Image.Resampling.LANCZOS)
-                
-                # 根据配置添加延迟
-                if self.use_delay:
-                    time.sleep(self.delay)
-                
-                return pil_img
+                else:
+                    new_width = int(img.width * self.scale_factor)
+                    new_height = int(img.height * self.scale_factor)
+                    img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            
+            # 根据配置添加延迟
+            if self.use_delay:
+                time.sleep(self.delay)
+            
+            return img
+            
         except Exception as e:
             logger.error(f"屏幕捕获失败: {e}")
             return None
@@ -111,41 +177,68 @@ class ScreenCapture:
     def capture_region(self, x1, y1, x2, y2, as_numpy=True):
         """捕获指定区域"""
         try:
-            # 设置临时区域
-            temp_monitor = {
-                "top": y1,
-                "left": x1,
-                "width": x2 - x1,
-                "height": y2 - y1
-            }
+            screenshot = None
             
-            # 使用mss捕获指定区域
-            screenshot = self.sct.grab(temp_monitor)
-            
-            if as_numpy:
-                # 转换为numpy数组
-                img = np.array(screenshot)
-                # mss返回的是BGRA格式，转换为BGR
-                img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
+            if self.capture_method == "mss":
+                # 设置临时区域
+                temp_monitor = {
+                    "top": y1,
+                    "left": x1,
+                    "width": x2 - x1,
+                    "height": y2 - y1
+                }
                 
-                # 根据质量设置调整分辨率
-                if self.scale_factor != 1.0:
+                # 使用mss捕获指定区域
+                screenshot = self.sct.grab(temp_monitor)
+                
+                if as_numpy:
+                    # 转换为numpy数组
+                    img = np.array(screenshot)
+                    # mss返回的是BGRA格式，转换为BGR
+                    img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
+                else:
+                    # 返回PIL图像
+                    img = Image.frombytes("RGB", screenshot.size, screenshot.rgb)
+                    
+            elif self.capture_method == "pil":
+                # 使用PIL ImageGrab捕获指定区域
+                from PIL import ImageGrab
+                screenshot = ImageGrab.grab(bbox=(x1, y1, x2, y2))
+                
+                if as_numpy:
+                    # 转换为numpy数组
+                    img = np.array(screenshot)
+                    # PIL返回的是RGB格式，转换为BGR
+                    img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+                else:
+                    img = screenshot
+                    
+            elif self.capture_method == "pyautogui":
+                # 使用pyautogui捕获指定区域
+                import pyautogui
+                screenshot = pyautogui.screenshot(region=(x1, y1, x2-x1, y2-y1))
+                
+                if as_numpy:
+                    # 转换为numpy数组
+                    img = np.array(screenshot)
+                    # pyautogui返回的是RGB格式，转换为BGR
+                    img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+                else:
+                    img = screenshot
+            
+            # 根据质量设置调整分辨率
+            if self.scale_factor != 1.0:
+                if as_numpy:
                     new_width = int(img.shape[1] * self.scale_factor)
                     new_height = int(img.shape[0] * self.scale_factor)
                     img = cv2.resize(img, (new_width, new_height), interpolation=cv2.INTER_AREA)
-                
-                return img
-            else:
-                # 返回PIL图像
-                pil_img = Image.frombytes("RGB", screenshot.size, screenshot.rgb)
-                
-                # 根据质量设置调整分辨率
-                if self.scale_factor != 1.0:
-                    new_width = int(pil_img.width * self.scale_factor)
-                    new_height = int(pil_img.height * self.scale_factor)
-                    pil_img = pil_img.resize((new_width, new_height), Image.Resampling.LANCZOS)
-                
-                return pil_img
+                else:
+                    new_width = int(img.width * self.scale_factor)
+                    new_height = int(img.height * self.scale_factor)
+                    img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
+            
+            return img
+            
         except Exception as e:
             logger.error(f"区域捕获失败: {e}")
             return None
@@ -185,11 +278,24 @@ class ScreenCapture:
     def get_screen_size(self):
         """获取屏幕尺寸"""
         try:
-            monitor = self.sct.monitors[0]  # 主显示器
-            return (monitor["width"], monitor["height"])
+            if self.capture_method == "mss":
+                monitor = self.sct.monitors[0]  # 主显示器
+                return (monitor["width"], monitor["height"])
+            elif self.capture_method == "pil":
+                from PIL import ImageGrab
+                # 使用PIL获取屏幕尺寸
+                screen = ImageGrab.grab()
+                return (screen.width, screen.height)
+            elif self.capture_method == "pyautogui":
+                import pyautogui
+                # 使用pyautogui获取屏幕尺寸
+                return pyautogui.size()
+            else:
+                # 默认返回配置中的分辨率
+                return tuple(self.resolution)
         except Exception as e:
             logger.error(f"获取屏幕尺寸失败: {e}")
-            return None
+            return tuple(self.resolution)  # 返回配置的分辨率作为后备
     
     def set_capture_region(self, region):
         """设置捕获区域"""

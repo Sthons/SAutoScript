@@ -81,6 +81,8 @@ if __name__ == "__main__":
     
     # 创建脚本实例
     script = ExampleScript()
-    
+    screenshot = script.screen_capture.capture(False)
+    screenshot.save("C:\\Users\\53443\Desktop\\test_1.jpg")
+    # script.input_controller.move_mouse(3686, 1238)
     # 启动脚本
     script.start(1)
