@@ -85,7 +85,8 @@ class TestMemoryScript(BaseGameScript):
                 
                 # 模拟找到最佳匹配
                 min_val, max_val = np.min(result), np.max(result)
-                min_loc, max_loc = np.unravel_index(np.argmin(result)), np.unravel_index(np.argmax(result))
+                min_loc = np.unravel_index(np.argmin(result), result.shape)
+                max_loc = np.unravel_index(np.argmax(result), result.shape)
                 
                 logger.debug(f"模拟匹配结果: min={min_val:.3f} at {min_loc}, max={max_val:.3f} at {max_loc}")
                 

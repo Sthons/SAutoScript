@@ -12,7 +12,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'core'))
 
 from base_game_script import BaseGameScript
 
-class MyGameScript(BaseGameScript):
+class GameScriptTemplate(BaseGameScript):
 
     def __init__(self, config_path=None):
         # 调用父类初始化方法
@@ -22,7 +22,7 @@ class MyGameScript(BaseGameScript):
         self.game_window_rect = {} # 初始化游戏窗口信息
         self.game_window_center_point = {} # 初始化游戏窗口中心坐标
         
-        logger.info("夜航手册-65 初始化完成")
+        logger.info("初始化完成")
 
 
     def on_start(self):
@@ -31,7 +31,7 @@ class MyGameScript(BaseGameScript):
         logger.info("目前所有窗口：")
         # logger.info(self.window_locator.list_windows())
         
-        game_window = self.window_locator.get_window_rect(window_title="TheSpellBrigade")
+        game_window = self.window_locator.get_window_rect(window_title="window_title")
 
         
         # if not game_window:
@@ -57,33 +57,35 @@ class MyGameScript(BaseGameScript):
         游戏逻辑，子类必须实现此方法
         """
         
-        # # 点击 开始挑战 按钮 
+        # 等待/识别 
         # logger.info(self.game_ops.appear(
-        #     "mod\\general\\runaway.png",  # 模板名称
+        #     "mod\\test\\test_img.png",  # 模板名称
         #     timeout=10,        # 超时时间(秒)
         #     threshold=0.8,    # 匹配阈值
         # ))
-        self.game_ops.appear_then_click(
-            "mod\\test\\test_img.png",  # 模板名称
-            timeout=600,        # 超时时间(秒)
-            threshold=0.6,    # 匹配阈值
-            click_delay=1   # 点击后延迟
-        )
 
-        self.input_controller.click(button='left', x=self.game_window_center_point['left'], y=self.game_window_center_point['top'])
+        # 等待/识别 -> 点击
+        # self.game_ops.appear_then_click(
+        #     "mod\\test\\test_img.png",  # 模板名称
+        #     timeout=600,        # 超时时间(秒)
+        #     threshold=0.6,    # 匹配阈值
+        #     click_delay=1   # 点击后延迟
+        # )
+
+        # 点击
+        # self.input_controller.click(button='left', x=self.game_window_center_point['left'], y=self.game_window_center_point['top'])
 
     
     def on_stop(self):
-        # self.input_controller.key_up('w') # 松开 w 键
         pass
     
         
 if __name__ == "__main__":
 
-    logger.info("启动自定义游戏脚本...")
+    logger.info("启动游戏脚本模板...")
     
     # 创建脚本实例
-    script = MyGameScript()
+    script = GameScriptTemplate()
     
     # 启动脚本
-    script.start(100000)
+    script.start(10)

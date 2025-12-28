@@ -1,0 +1,595 @@
+2025-12-28 20:56:58.091 | INFO     | core.screen_capture:__init__:29 - 屏幕捕获初始化完成，捕获区域: {'left': 0, 'top': 0, 'width': 5147, 'height': 1440}
+2025-12-28 20:56:58.091 | INFO     | core.input_controller:__init__:32 - 输入控制器初始化完成，屏幕尺寸: 3440x1440
+2025-12-28 20:56:58.091 | INFO     | core.window_locator:__init__:14 - 窗口定位模块初始化完成
+2025-12-28 20:56:58.092 | INFO     | core.game_operations:__init__:37 - 游戏操作模块初始化完成
+2025-12-28 20:56:58.093 | INFO     | core.base_game_script:__init__:71 - TestMemoryScript初始化完成
+2025-12-28 20:56:58.093 | INFO     | core.base_game_script:start:134 - 启动TestMemoryScript
+2025-12-28 20:56:58.094 | INFO     | __main__:on_start:103 - === 开始测试智能垃圾回收功能 ===
+2025-12-28 20:56:58.095 | INFO     | __main__:on_start:104 - 配置参数:
+2025-12-28 20:56:58.095 | INFO     | __main__:on_start:105 -   - GC频率: 30
+2025-12-28 20:56:58.096 | INFO     | __main__:on_start:106 -   - 内存阈值: 400MB
+2025-12-28 20:56:58.096 | INFO     | __main__:on_start:107 -   - 启用智能GC: True
+2025-12-28 20:56:58.096 | INFO     | __main__:on_start:108 -   - 启用内存监控: True
+2025-12-28 20:56:58.097 | INFO     | __main__:on_start:109 -   - 内存检查频率: 20
+2025-12-28 20:56:58.097 | INFO     | __main__:on_start:113 - 初始内存使用: 50.6MB
+2025-12-28 20:56:58.405 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:56:58.407 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 1/100
+2025-12-28 20:56:58.407 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 1/1
+2025-12-28 20:56:58.834 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:56:58.837 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 2/100
+2025-12-28 20:56:58.837 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 2/2
+2025-12-28 20:56:59.248 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:56:59.250 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 3/100
+2025-12-28 20:56:59.250 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 3/3
+2025-12-28 20:56:59.657 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:56:59.660 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 4/100
+2025-12-28 20:56:59.660 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 4/4
+2025-12-28 20:57:00.068 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:00.071 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 5/100
+2025-12-28 20:57:00.071 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 5/5
+2025-12-28 20:57:00.491 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:00.494 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 6/100
+2025-12-28 20:57:00.494 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 6/6
+2025-12-28 20:57:00.903 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:00.905 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 7/100
+2025-12-28 20:57:00.906 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 7/7
+2025-12-28 20:57:01.338 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:01.340 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 8/100
+2025-12-28 20:57:01.342 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 8/8
+2025-12-28 20:57:01.786 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:01.789 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 9/100
+2025-12-28 20:57:01.790 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 9/9
+2025-12-28 20:57:02.235 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:02.238 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 10/100
+2025-12-28 20:57:02.239 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 10/10
+2025-12-28 20:57:02.656 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:02.660 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 11/100
+2025-12-28 20:57:02.660 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 11/11
+2025-12-28 20:57:03.084 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:03.087 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 12/100
+2025-12-28 20:57:03.087 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 12/12
+2025-12-28 20:57:03.508 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:03.512 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 13/100
+2025-12-28 20:57:03.512 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 13/13
+2025-12-28 20:57:03.953 | WARNING  | __main__:_simulate_game_operations:97 - 模拟游戏操作出错: unravel_index() missing required argument 'shape' (pos 2)
+2025-12-28 20:57:03.956 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 14/100
+2025-12-28 20:57:03.957 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 14/14
+2025-12-28 20:57:04.227 | INFO     | core.base_game_script:start:149 - 接收到中断信号，正在停止...
+2025-12-28 20:57:04.228 | INFO     | core.base_game_script:stop:162 - 停止TestMemoryScript
+2025-12-28 20:57:04.241 | INFO     | __main__:on_stop:124 - 最终内存使用: 50.9MB
+2025-12-28 20:57:04.242 | INFO     | __main__:on_stop:126 - === 测试完成 ===
+2025-12-28 20:58:04.762 | INFO     | core.screen_capture:__init__:29 - 屏幕捕获初始化完成，捕获区域: {'left': 0, 'top': 0, 'width': 5147, 'height': 1440}
+2025-12-28 20:58:04.763 | INFO     | core.input_controller:__init__:32 - 输入控制器初始化完成，屏幕尺寸: 3440x1440
+2025-12-28 20:58:04.763 | INFO     | core.window_locator:__init__:14 - 窗口定位模块初始化完成
+2025-12-28 20:58:04.763 | INFO     | core.game_operations:__init__:37 - 游戏操作模块初始化完成
+2025-12-28 20:58:04.764 | INFO     | core.base_game_script:__init__:71 - TestMemoryScript初始化完成
+2025-12-28 20:58:04.764 | INFO     | core.base_game_script:start:134 - 启动TestMemoryScript
+2025-12-28 20:58:04.765 | INFO     | __main__:on_start:104 - === 开始测试智能垃圾回收功能 ===
+2025-12-28 20:58:04.765 | INFO     | __main__:on_start:105 - 配置参数:
+2025-12-28 20:58:04.765 | INFO     | __main__:on_start:106 -   - GC频率: 30
+2025-12-28 20:58:04.765 | INFO     | __main__:on_start:107 -   - 内存阈值: 400MB
+2025-12-28 20:58:04.765 | INFO     | __main__:on_start:108 -   - 启用智能GC: True
+2025-12-28 20:58:04.766 | INFO     | __main__:on_start:109 -   - 启用内存监控: True
+2025-12-28 20:58:04.766 | INFO     | __main__:on_start:110 -   - 内存检查频率: 20
+2025-12-28 20:58:04.766 | INFO     | __main__:on_start:114 - 初始内存使用: 50.6MB
+2025-12-28 20:58:05.075 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (273, 126), max=1.000 at (164, 677)
+2025-12-28 20:58:05.135 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (589, 1854), max=1.000 at (87, 76)
+2025-12-28 20:58:05.195 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (109, 567), max=1.000 at (467, 1555)
+2025-12-28 20:58:05.197 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 1/100
+2025-12-28 20:58:05.198 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 1/1
+2025-12-28 20:58:05.632 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (810, 987), max=1.000 at (388, 310)
+2025-12-28 20:58:05.692 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (453, 504), max=1.000 at (506, 1866)
+2025-12-28 20:58:05.755 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (892, 1372), max=1.000 at (444, 1659)
+2025-12-28 20:58:05.757 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 2/100
+2025-12-28 20:58:05.758 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 2/2
+2025-12-28 20:58:06.196 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (639, 1612), max=1.000 at (265, 358)
+2025-12-28 20:58:06.256 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (69, 1669), max=1.000 at (484, 1456)
+2025-12-28 20:58:06.318 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (598, 926), max=1.000 at (244, 201)
+2025-12-28 20:58:06.320 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 3/100
+2025-12-28 20:58:06.321 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 3/3
+2025-12-28 20:58:06.750 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (392, 651), max=1.000 at (396, 1217)
+2025-12-28 20:58:06.808 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (777, 1783), max=1.000 at (392, 314)
+2025-12-28 20:58:06.868 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (825, 1004), max=1.000 at (523, 985)
+2025-12-28 20:58:06.871 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 4/100
+2025-12-28 20:58:06.871 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 4/4
+2025-12-28 20:58:07.275 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (906, 1524), max=1.000 at (641, 923)
+2025-12-28 20:58:07.334 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (394, 810), max=1.000 at (571, 797)
+2025-12-28 20:58:07.391 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (242, 51), max=1.000 at (703, 141)
+2025-12-28 20:58:07.394 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 5/100
+2025-12-28 20:58:07.394 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 5/5
+2025-12-28 20:58:07.799 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (946, 124), max=1.000 at (223, 642)
+2025-12-28 20:58:07.858 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (960, 857), max=1.000 at (538, 940)
+2025-12-28 20:58:07.913 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (1019, 1124), max=1.000 at (679, 1324)
+2025-12-28 20:58:07.917 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 6/100
+2025-12-28 20:58:07.918 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 6/6
+2025-12-28 20:58:08.310 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (548, 932), max=1.000 at (947, 1538)
+2025-12-28 20:58:08.368 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (644, 1325), max=1.000 at (980, 636)
+2025-12-28 20:58:08.423 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (179, 771), max=1.000 at (255, 1191)
+2025-12-28 20:58:08.425 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 7/100
+2025-12-28 20:58:08.426 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 7/7
+2025-12-28 20:58:08.812 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (386, 554), max=1.000 at (235, 243)
+2025-12-28 20:58:08.868 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (14, 1837), max=1.000 at (781, 1455)
+2025-12-28 20:58:08.922 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (295, 669), max=1.000 at (297, 1401)
+2025-12-28 20:58:08.924 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 8/100
+2025-12-28 20:58:08.925 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 8/8
+2025-12-28 20:58:09.303 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (1009, 1843), max=1.000 at (138, 73)
+2025-12-28 20:58:09.357 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (390, 1610), max=1.000 at (362, 1134)
+2025-12-28 20:58:09.411 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (904, 1437), max=1.000 at (200, 194)
+2025-12-28 20:58:09.414 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 9/100
+2025-12-28 20:58:09.415 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 9/9
+2025-12-28 20:58:09.786 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (695, 1112), max=1.000 at (166, 1325)
+2025-12-28 20:58:09.841 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (369, 1335), max=1.000 at (327, 199)
+2025-12-28 20:58:09.895 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (3, 1267), max=1.000 at (324, 1061)
+2025-12-28 20:58:09.898 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 10/100
+2025-12-28 20:58:09.898 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 10/10
+2025-12-28 20:58:10.310 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (188, 1336), max=1.000 at (692, 1644)
+2025-12-28 20:58:10.370 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (849, 1259), max=1.000 at (526, 1202)
+2025-12-28 20:58:10.428 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (746, 634), max=1.000 at (208, 472)
+2025-12-28 20:58:10.432 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 11/100
+2025-12-28 20:58:10.432 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 11/11
+2025-12-28 20:58:10.863 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (13, 853), max=1.000 at (672, 1491)
+2025-12-28 20:58:10.927 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (280, 339), max=1.000 at (451, 1087)
+2025-12-28 20:58:10.987 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (271, 374), max=1.000 at (634, 1814)
+2025-12-28 20:58:10.990 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 12/100
+2025-12-28 20:58:10.990 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 12/12
+2025-12-28 20:58:11.409 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (971, 912), max=1.000 at (633, 311)
+2025-12-28 20:58:11.470 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (940, 873), max=1.000 at (147, 1701)
+2025-12-28 20:58:11.529 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (315, 1002), max=1.000 at (201, 150)
+2025-12-28 20:58:11.532 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 13/100
+2025-12-28 20:58:11.532 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 13/13
+2025-12-28 20:58:11.921 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (571, 660), max=1.000 at (356, 1785)
+2025-12-28 20:58:11.976 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (510, 1667), max=1.000 at (64, 1732)
+2025-12-28 20:58:12.030 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (23, 578), max=1.000 at (453, 1292)
+2025-12-28 20:58:12.032 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 14/100
+2025-12-28 20:58:12.032 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 14/14
+2025-12-28 20:58:12.403 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (176, 1508), max=1.000 at (961, 178)
+2025-12-28 20:58:12.455 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (604, 1747), max=1.000 at (854, 402)
+2025-12-28 20:58:12.507 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (329, 544), max=1.000 at (166, 1695)
+2025-12-28 20:58:12.509 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 15/100
+2025-12-28 20:58:12.510 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 15/15
+2025-12-28 20:58:12.879 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (837, 65), max=1.000 at (661, 1323)
+2025-12-28 20:58:12.933 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (278, 190), max=1.000 at (206, 375)
+2025-12-28 20:58:12.985 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (666, 350), max=1.000 at (203, 831)
+2025-12-28 20:58:12.986 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 16/100
+2025-12-28 20:58:12.987 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 16/16
+2025-12-28 20:58:13.347 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (663, 838), max=1.000 at (597, 335)
+2025-12-28 20:58:13.396 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (295, 1794), max=1.000 at (819, 485)
+2025-12-28 20:58:13.445 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (739, 1824), max=1.000 at (841, 1433)
+2025-12-28 20:58:13.447 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 17/100
+2025-12-28 20:58:13.447 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 17/17
+2025-12-28 20:58:13.809 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (309, 1062), max=1.000 at (939, 829)
+2025-12-28 20:58:13.857 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (730, 1770), max=1.000 at (862, 569)
+2025-12-28 20:58:13.906 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (531, 772), max=1.000 at (74, 83)
+2025-12-28 20:58:13.908 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 18/100
+2025-12-28 20:58:13.908 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 18/18
+2025-12-28 20:58:14.272 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (417, 416), max=1.000 at (293, 15)
+2025-12-28 20:58:14.324 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (73, 671), max=1.000 at (951, 1795)
+2025-12-28 20:58:14.375 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (127, 1430), max=1.000 at (870, 322)
+2025-12-28 20:58:14.377 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 19/100
+2025-12-28 20:58:14.377 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 19/19
+2025-12-28 20:58:14.775 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (760, 811), max=1.000 at (964, 1087)
+2025-12-28 20:58:14.833 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (689, 997), max=1.000 at (723, 1226)
+2025-12-28 20:58:14.890 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (693, 625), max=1.000 at (509, 349)
+2025-12-28 20:58:14.893 | INFO     | __main__:game_logic:63 - 当前内存使用: 248.7MB, 保留对象数: 20
+2025-12-28 20:58:14.893 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 20/100
+2025-12-28 20:58:14.893 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 20/20
+2025-12-28 20:58:15.310 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (839, 755), max=1.000 at (360, 179)
+2025-12-28 20:58:15.372 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (843, 183), max=1.000 at (813, 739)
+2025-12-28 20:58:15.435 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (287, 1203), max=1.000 at (523, 513)
+2025-12-28 20:58:15.437 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 21/100
+2025-12-28 20:58:15.438 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 21/21
+2025-12-28 20:58:15.855 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (447, 1672), max=1.000 at (437, 1204)
+2025-12-28 20:58:15.917 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (931, 163), max=1.000 at (103, 565)
+2025-12-28 20:58:15.976 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (960, 1470), max=1.000 at (151, 1310)
+2025-12-28 20:58:15.978 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 22/100
+2025-12-28 20:58:15.979 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 22/22
+2025-12-28 20:58:16.386 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (817, 975), max=1.000 at (186, 1145)
+2025-12-28 20:58:16.443 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (540, 1056), max=1.000 at (115, 1553)
+2025-12-28 20:58:16.500 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (149, 373), max=1.000 at (541, 1650)
+2025-12-28 20:58:16.503 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 23/100
+2025-12-28 20:58:16.503 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 23/23
+2025-12-28 20:58:16.906 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (118, 92), max=1.000 at (782, 1535)
+2025-12-28 20:58:16.962 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (477, 1635), max=1.000 at (865, 796)
+2025-12-28 20:58:17.020 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (582, 1684), max=1.000 at (194, 1836)
+2025-12-28 20:58:17.022 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 24/100
+2025-12-28 20:58:17.023 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 24/24
+2025-12-28 20:58:17.435 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (609, 218), max=1.000 at (875, 15)
+2025-12-28 20:58:17.494 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (289, 434), max=1.000 at (215, 555)
+2025-12-28 20:58:17.555 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (625, 1626), max=1.000 at (109, 186)
+2025-12-28 20:58:17.557 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 25/100
+2025-12-28 20:58:17.558 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 25/25
+2025-12-28 20:58:17.979 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (561, 383), max=1.000 at (111, 881)
+2025-12-28 20:58:18.038 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (892, 439), max=1.000 at (667, 1552)
+2025-12-28 20:58:18.096 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (644, 808), max=1.000 at (880, 929)
+2025-12-28 20:58:18.099 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 26/100
+2025-12-28 20:58:18.100 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 26/26
+2025-12-28 20:58:18.518 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (132, 572), max=1.000 at (175, 1127)
+2025-12-28 20:58:18.577 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (978, 855), max=1.000 at (366, 740)
+2025-12-28 20:58:18.637 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (977, 376), max=1.000 at (906, 241)
+2025-12-28 20:58:18.640 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 27/100
+2025-12-28 20:58:18.640 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 27/27
+2025-12-28 20:58:19.044 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (936, 579), max=1.000 at (413, 450)
+2025-12-28 20:58:19.101 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (808, 1052), max=1.000 at (1009, 1824)
+2025-12-28 20:58:19.157 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (134, 1672), max=1.000 at (712, 178)
+2025-12-28 20:58:19.160 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 28/100
+2025-12-28 20:58:19.161 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 28/28
+2025-12-28 20:58:19.544 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (121, 558), max=1.000 at (826, 1026)
+2025-12-28 20:58:19.598 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (327, 1608), max=1.000 at (570, 371)
+2025-12-28 20:58:19.651 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (747, 1793), max=1.000 at (630, 1021)
+2025-12-28 20:58:19.654 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 29/100
+2025-12-28 20:58:19.655 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 29/29
+2025-12-28 20:58:20.054 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (724, 426), max=1.000 at (547, 354)
+2025-12-28 20:58:20.112 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (582, 339), max=1.000 at (259, 1822)
+2025-12-28 20:58:20.171 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (764, 1812), max=1.000 at (133, 32)
+2025-12-28 20:58:20.174 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 30/100
+2025-12-28 20:58:20.175 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 30/30
+2025-12-28 20:58:20.175 | DEBUG    | core.base_game_script:_main_loop:187 - 执行定期垃圾回收 (第30次循环)
+2025-12-28 20:58:20.598 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (136, 1674), max=1.000 at (575, 1352)
+2025-12-28 20:58:20.658 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (912, 104), max=1.000 at (520, 176)
+2025-12-28 20:58:20.716 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (448, 549), max=1.000 at (480, 775)
+2025-12-28 20:58:20.720 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 31/100
+2025-12-28 20:58:20.721 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 31/31
+2025-12-28 20:58:21.124 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (166, 883), max=1.000 at (675, 1418)
+2025-12-28 20:58:21.180 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (57, 1423), max=1.000 at (443, 669)
+2025-12-28 20:58:21.238 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (138, 1195), max=1.000 at (9, 296)
+2025-12-28 20:58:21.241 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 32/100
+2025-12-28 20:58:21.242 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 32/32
+2025-12-28 20:58:21.638 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (859, 1466), max=1.000 at (42, 823)
+2025-12-28 20:58:21.693 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (489, 237), max=1.000 at (63, 166)
+2025-12-28 20:58:21.750 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (619, 374), max=1.000 at (774, 350)
+2025-12-28 20:58:21.755 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 33/100
+2025-12-28 20:58:21.755 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 33/33
+2025-12-28 20:58:22.146 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (542, 1117), max=1.000 at (961, 586)
+2025-12-28 20:58:22.203 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (287, 1330), max=1.000 at (252, 1529)
+2025-12-28 20:58:22.257 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (194, 1340), max=1.000 at (91, 1728)
+2025-12-28 20:58:22.260 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 34/100
+2025-12-28 20:58:22.260 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 34/34
+2025-12-28 20:58:22.649 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (391, 186), max=1.000 at (43, 1736)
+2025-12-28 20:58:22.702 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (986, 1654), max=1.000 at (17, 1860)
+2025-12-28 20:58:22.757 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (743, 1653), max=1.000 at (643, 1706)
+2025-12-28 20:58:22.760 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 35/100
+2025-12-28 20:58:22.760 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 35/35
+2025-12-28 20:58:23.151 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (902, 1124), max=1.000 at (935, 143)
+2025-12-28 20:58:23.208 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (211, 554), max=1.000 at (547, 645)
+2025-12-28 20:58:23.264 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (883, 1728), max=1.000 at (955, 980)
+2025-12-28 20:58:23.267 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 36/100
+2025-12-28 20:58:23.267 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 36/36
+2025-12-28 20:58:23.678 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (896, 375), max=1.000 at (855, 1584)
+2025-12-28 20:58:23.738 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (48, 136), max=1.000 at (192, 985)
+2025-12-28 20:58:23.796 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (704, 602), max=1.000 at (486, 1127)
+2025-12-28 20:58:23.799 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 37/100
+2025-12-28 20:58:23.799 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 37/37
+2025-12-28 20:58:24.240 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (880, 1767), max=1.000 at (1007, 12)
+2025-12-28 20:58:24.303 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (135, 342), max=1.000 at (38, 1071)
+2025-12-28 20:58:24.365 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (130, 91), max=1.000 at (168, 985)
+2025-12-28 20:58:24.368 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 38/100
+2025-12-28 20:58:24.369 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 38/38
+2025-12-28 20:58:24.786 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (372, 1336), max=1.000 at (912, 1602)
+2025-12-28 20:58:24.845 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (1022, 1246), max=1.000 at (887, 433)
+2025-12-28 20:58:24.905 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (133, 1366), max=1.000 at (682, 1611)
+2025-12-28 20:58:24.907 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 39/100
+2025-12-28 20:58:24.908 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 39/39
+2025-12-28 20:58:25.326 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (144, 1054), max=1.000 at (927, 609)
+2025-12-28 20:58:25.388 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (482, 824), max=1.000 at (611, 1130)
+2025-12-28 20:58:25.445 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (322, 1058), max=1.000 at (1016, 532)
+2025-12-28 20:58:25.448 | INFO     | __main__:game_logic:63 - 当前内存使用: 446.5MB, 保留对象数: 40
+2025-12-28 20:58:25.449 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 40/100
+2025-12-28 20:58:25.449 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 40/40
+2025-12-28 20:58:25.450 | WARNING  | core.base_game_script:_main_loop:194 - 内存使用过高: 446.5MB > 400MB，执行垃圾回收
+2025-12-28 20:58:25.456 | INFO     | core.base_game_script:_main_loop:198 - 垃圾回收后内存使用: 446.5MB
+2025-12-28 20:58:25.864 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (475, 292), max=1.000 at (115, 1439)
+2025-12-28 20:58:25.922 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (434, 1739), max=1.000 at (223, 1554)
+2025-12-28 20:58:25.979 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (891, 994), max=1.000 at (242, 472)
+2025-12-28 20:58:25.982 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 41/100
+2025-12-28 20:58:25.983 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 41/41
+2025-12-28 20:58:26.380 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (546, 1039), max=1.000 at (711, 1408)
+2025-12-28 20:58:26.436 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (124, 126), max=1.000 at (614, 25)
+2025-12-28 20:58:26.492 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (67, 1855), max=1.000 at (530, 818)
+2025-12-28 20:58:26.495 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 42/100
+2025-12-28 20:58:26.495 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 42/42
+2025-12-28 20:58:26.877 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (62, 1577), max=1.000 at (542, 342)
+2025-12-28 20:58:26.931 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (872, 564), max=1.000 at (683, 1415)
+2025-12-28 20:58:26.986 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (507, 357), max=1.000 at (561, 346)
+2025-12-28 20:58:26.988 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 43/100
+2025-12-28 20:58:26.989 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 43/43
+2025-12-28 20:58:27.366 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (877, 1603), max=1.000 at (71, 411)
+2025-12-28 20:58:27.421 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (95, 642), max=1.000 at (437, 193)
+2025-12-28 20:58:27.476 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (829, 1149), max=1.000 at (652, 1520)
+2025-12-28 20:58:27.479 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 44/100
+2025-12-28 20:58:27.479 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 44/44
+2025-12-28 20:58:27.887 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (959, 706), max=1.000 at (987, 1482)
+2025-12-28 20:58:27.944 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (889, 392), max=1.000 at (597, 1343)
+2025-12-28 20:58:28.004 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (890, 43), max=1.000 at (165, 772)
+2025-12-28 20:58:28.007 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 45/100
+2025-12-28 20:58:28.007 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 45/45
+2025-12-28 20:58:28.408 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (897, 1242), max=1.000 at (53, 1112)
+2025-12-28 20:58:28.467 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (570, 1331), max=1.000 at (33, 1449)
+2025-12-28 20:58:28.524 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (16, 1285), max=1.000 at (741, 1318)
+2025-12-28 20:58:28.527 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 46/100
+2025-12-28 20:58:28.527 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 46/46
+2025-12-28 20:58:28.924 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (456, 1143), max=1.000 at (13, 729)
+2025-12-28 20:58:28.980 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (654, 1141), max=1.000 at (832, 34)
+2025-12-28 20:58:29.036 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (946, 1618), max=1.000 at (367, 1642)
+2025-12-28 20:58:29.039 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 47/100
+2025-12-28 20:58:29.040 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 47/47
+2025-12-28 20:58:29.443 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (615, 1280), max=1.000 at (990, 250)
+2025-12-28 20:58:29.499 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (453, 1709), max=1.000 at (387, 614)
+2025-12-28 20:58:29.556 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (937, 1021), max=1.000 at (769, 935)
+2025-12-28 20:58:29.559 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 48/100
+2025-12-28 20:58:29.559 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 48/48
+2025-12-28 20:58:29.954 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (194, 141), max=1.000 at (646, 1832)
+2025-12-28 20:58:30.007 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (521, 368), max=1.000 at (165, 165)
+2025-12-28 20:58:30.061 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (12, 897), max=1.000 at (980, 1777)
+2025-12-28 20:58:30.064 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 49/100
+2025-12-28 20:58:30.065 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 49/49
+2025-12-28 20:58:30.454 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (52, 1292), max=1.000 at (720, 790)
+2025-12-28 20:58:30.508 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (798, 1202), max=1.000 at (205, 60)
+2025-12-28 20:58:30.562 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (908, 638), max=1.000 at (235, 718)
+2025-12-28 20:58:30.564 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 50/100
+2025-12-28 20:58:30.565 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 50/50
+2025-12-28 20:58:30.963 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (225, 1070), max=1.000 at (807, 653)
+2025-12-28 20:58:31.021 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (103, 1204), max=1.000 at (186, 1216)
+2025-12-28 20:58:31.077 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (564, 1035), max=1.000 at (832, 1442)
+2025-12-28 20:58:31.080 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 51/100
+2025-12-28 20:58:31.081 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 51/51
+2025-12-28 20:58:31.488 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (994, 1410), max=1.000 at (326, 379)
+2025-12-28 20:58:31.545 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (63, 865), max=1.000 at (442, 292)
+2025-12-28 20:58:31.604 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (99, 865), max=1.000 at (779, 140)
+2025-12-28 20:58:31.607 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 52/100
+2025-12-28 20:58:31.607 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 52/52
+2025-12-28 20:58:32.030 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (223, 1358), max=1.000 at (492, 214)
+2025-12-28 20:58:32.092 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (429, 1013), max=1.000 at (1004, 857)
+2025-12-28 20:58:32.153 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (693, 1210), max=1.000 at (917, 143)
+2025-12-28 20:58:32.156 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 53/100
+2025-12-28 20:58:32.157 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 53/53
+2025-12-28 20:58:32.559 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (63, 1526), max=1.000 at (821, 36)
+2025-12-28 20:58:32.615 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (627, 891), max=1.000 at (341, 1157)
+2025-12-28 20:58:32.672 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (442, 1480), max=1.000 at (470, 1870)
+2025-12-28 20:58:32.674 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 54/100
+2025-12-28 20:58:32.675 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 54/54
+2025-12-28 20:58:33.079 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (618, 887), max=1.000 at (503, 1022)
+2025-12-28 20:58:33.136 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (145, 36), max=1.000 at (567, 112)
+2025-12-28 20:58:33.190 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (921, 1633), max=1.000 at (372, 43)
+2025-12-28 20:58:33.193 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 55/100
+2025-12-28 20:58:33.193 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 55/55
+2025-12-28 20:58:33.589 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (718, 447), max=1.000 at (584, 1746)
+2025-12-28 20:58:33.648 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (938, 1040), max=1.000 at (45, 71)
+2025-12-28 20:58:33.706 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (441, 498), max=1.000 at (49, 48)
+2025-12-28 20:58:33.709 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 56/100
+2025-12-28 20:58:33.709 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 56/56
+2025-12-28 20:58:34.136 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (497, 1674), max=1.000 at (582, 24)
+2025-12-28 20:58:34.194 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (357, 532), max=1.000 at (464, 1608)
+2025-12-28 20:58:34.254 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (410, 1508), max=1.000 at (70, 660)
+2025-12-28 20:58:34.257 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 57/100
+2025-12-28 20:58:34.258 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 57/57
+2025-12-28 20:58:34.658 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (815, 1127), max=1.000 at (49, 1558)
+2025-12-28 20:58:34.715 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (201, 1479), max=1.000 at (93, 1481)
+2025-12-28 20:58:34.772 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (815, 686), max=1.000 at (471, 861)
+2025-12-28 20:58:34.776 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 58/100
+2025-12-28 20:58:34.776 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 58/58
+2025-12-28 20:58:35.182 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (582, 159), max=1.000 at (470, 1113)
+2025-12-28 20:58:35.239 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (162, 1248), max=1.000 at (326, 141)
+2025-12-28 20:58:35.296 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (282, 355), max=1.000 at (320, 1231)
+2025-12-28 20:58:35.299 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 59/100
+2025-12-28 20:58:35.300 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 59/59
+2025-12-28 20:58:35.702 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (295, 1762), max=1.000 at (255, 441)
+2025-12-28 20:58:35.758 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (941, 344), max=1.000 at (9, 636)
+2025-12-28 20:58:35.814 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (218, 1040), max=1.000 at (234, 1321)
+2025-12-28 20:58:35.818 | INFO     | __main__:game_logic:63 - 当前内存使用: 644.3MB, 保留对象数: 60
+2025-12-28 20:58:35.818 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 60/100
+2025-12-28 20:58:35.818 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 60/60
+2025-12-28 20:58:35.818 | DEBUG    | core.base_game_script:_main_loop:187 - 执行定期垃圾回收 (第60次循环)
+2025-12-28 20:58:35.824 | WARNING  | core.base_game_script:_main_loop:194 - 内存使用过高: 644.3MB > 400MB，执行垃圾回收
+2025-12-28 20:58:35.828 | INFO     | core.base_game_script:_main_loop:198 - 垃圾回收后内存使用: 644.3MB
+2025-12-28 20:58:36.230 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (307, 1817), max=1.000 at (927, 1256)
+2025-12-28 20:58:36.286 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (450, 393), max=1.000 at (358, 1507)
+2025-12-28 20:58:36.343 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (897, 1403), max=1.000 at (449, 1868)
+2025-12-28 20:58:36.346 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 61/100
+2025-12-28 20:58:36.346 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 61/61
+2025-12-28 20:58:36.733 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (397, 1826), max=1.000 at (58, 394)
+2025-12-28 20:58:36.790 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (748, 382), max=1.000 at (458, 1521)
+2025-12-28 20:58:36.846 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (230, 1118), max=1.000 at (815, 601)
+2025-12-28 20:58:36.848 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 62/100
+2025-12-28 20:58:36.849 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 62/62
+2025-12-28 20:58:37.272 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (356, 764), max=1.000 at (828, 430)
+2025-12-28 20:58:37.330 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (127, 789), max=1.000 at (577, 518)
+2025-12-28 20:58:37.390 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (883, 1011), max=1.000 at (668, 532)
+2025-12-28 20:58:37.393 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 63/100
+2025-12-28 20:58:37.394 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 63/63
+2025-12-28 20:58:37.822 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (303, 570), max=1.000 at (839, 581)
+2025-12-28 20:58:37.887 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (627, 293), max=1.000 at (671, 1197)
+2025-12-28 20:58:37.954 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (969, 1821), max=1.000 at (677, 87)
+2025-12-28 20:58:37.957 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 64/100
+2025-12-28 20:58:37.957 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 64/64
+2025-12-28 20:58:38.392 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (592, 889), max=1.000 at (968, 632)
+2025-12-28 20:58:38.454 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (508, 76), max=1.000 at (657, 458)
+2025-12-28 20:58:38.514 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (611, 971), max=1.000 at (972, 1482)
+2025-12-28 20:58:38.518 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 65/100
+2025-12-28 20:58:38.518 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 65/65
+2025-12-28 20:58:38.927 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (794, 357), max=1.000 at (337, 552)
+2025-12-28 20:58:38.985 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (613, 588), max=1.000 at (236, 1132)
+2025-12-28 20:58:39.040 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (258, 632), max=1.000 at (650, 1243)
+2025-12-28 20:58:39.043 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 66/100
+2025-12-28 20:58:39.044 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 66/66
+2025-12-28 20:58:39.438 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (73, 254), max=1.000 at (33, 1703)
+2025-12-28 20:58:39.492 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (907, 568), max=1.000 at (460, 373)
+2025-12-28 20:58:39.546 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (299, 497), max=1.000 at (796, 680)
+2025-12-28 20:58:39.548 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 67/100
+2025-12-28 20:58:39.550 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 67/67
+2025-12-28 20:58:39.940 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (876, 56), max=1.000 at (919, 56)
+2025-12-28 20:58:39.995 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (1008, 823), max=1.000 at (560, 1766)
+2025-12-28 20:58:40.049 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (804, 1204), max=1.000 at (23, 877)
+2025-12-28 20:58:40.052 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 68/100
+2025-12-28 20:58:40.052 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 68/68
+2025-12-28 20:58:40.450 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (171, 1160), max=1.000 at (844, 1134)
+2025-12-28 20:58:40.509 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (978, 1440), max=1.000 at (673, 1033)
+2025-12-28 20:58:40.567 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (14, 1172), max=1.000 at (419, 1079)
+2025-12-28 20:58:40.570 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 69/100
+2025-12-28 20:58:40.571 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 69/69
+2025-12-28 20:58:40.990 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (734, 1512), max=1.000 at (489, 1145)
+2025-12-28 20:58:41.049 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (601, 559), max=1.000 at (643, 1763)
+2025-12-28 20:58:41.108 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (535, 1229), max=1.000 at (747, 494)
+2025-12-28 20:58:41.112 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 70/100
+2025-12-28 20:58:41.112 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 70/70
+2025-12-28 20:58:41.524 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (262, 97), max=1.000 at (466, 321)
+2025-12-28 20:58:41.584 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (215, 1016), max=1.000 at (633, 219)
+2025-12-28 20:58:41.642 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (118, 686), max=1.000 at (348, 278)
+2025-12-28 20:58:41.644 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 71/100
+2025-12-28 20:58:41.645 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 71/71
+2025-12-28 20:58:42.044 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (318, 218), max=1.000 at (969, 629)
+2025-12-28 20:58:42.098 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (120, 181), max=1.000 at (272, 1732)
+2025-12-28 20:58:42.156 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (807, 373), max=1.000 at (878, 865)
+2025-12-28 20:58:42.159 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 72/100
+2025-12-28 20:58:42.159 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 72/72
+2025-12-28 20:58:42.542 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (74, 1421), max=1.000 at (451, 312)
+2025-12-28 20:58:42.596 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (168, 287), max=1.000 at (190, 250)
+2025-12-28 20:58:42.650 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (1007, 566), max=1.000 at (1004, 1479)
+2025-12-28 20:58:42.653 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 73/100
+2025-12-28 20:58:42.654 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 73/73
+2025-12-28 20:58:43.059 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (81, 1251), max=1.000 at (910, 1272)
+2025-12-28 20:58:43.119 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (345, 192), max=1.000 at (353, 18)
+2025-12-28 20:58:43.179 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (934, 1535), max=1.000 at (421, 336)
+2025-12-28 20:58:43.182 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 74/100
+2025-12-28 20:58:43.182 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 74/74
+2025-12-28 20:58:43.606 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (137, 498), max=1.000 at (371, 1023)
+2025-12-28 20:58:43.665 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (748, 900), max=1.000 at (774, 441)
+2025-12-28 20:58:43.724 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (245, 606), max=1.000 at (526, 391)
+2025-12-28 20:58:43.727 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 75/100
+2025-12-28 20:58:43.728 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 75/75
+2025-12-28 20:58:44.132 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (947, 1313), max=1.000 at (106, 503)
+2025-12-28 20:58:44.190 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (175, 1395), max=1.000 at (297, 1003)
+2025-12-28 20:58:44.247 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (941, 310), max=1.000 at (958, 1814)
+2025-12-28 20:58:44.250 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 76/100
+2025-12-28 20:58:44.251 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 76/76
+2025-12-28 20:58:44.652 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (360, 573), max=1.000 at (702, 1222)
+2025-12-28 20:58:44.708 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (34, 36), max=1.000 at (273, 330)
+2025-12-28 20:58:44.767 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (401, 295), max=1.000 at (490, 1844)
+2025-12-28 20:58:44.770 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 77/100
+2025-12-28 20:58:44.771 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 77/77
+2025-12-28 20:58:45.193 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (287, 974), max=1.000 at (513, 1577)
+2025-12-28 20:58:45.252 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (449, 693), max=1.000 at (1022, 860)
+2025-12-28 20:58:45.308 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (668, 1583), max=1.000 at (249, 608)
+2025-12-28 20:58:45.310 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 78/100
+2025-12-28 20:58:45.311 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 78/78
+2025-12-28 20:58:45.707 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (597, 643), max=1.000 at (657, 725)
+2025-12-28 20:58:45.761 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (468, 661), max=1.000 at (51, 226)
+2025-12-28 20:58:45.816 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (299, 677), max=1.000 at (821, 1154)
+2025-12-28 20:58:45.818 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 79/100
+2025-12-28 20:58:45.819 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 79/79
+2025-12-28 20:58:46.202 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (415, 1698), max=1.000 at (558, 1189)
+2025-12-28 20:58:46.256 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (299, 314), max=1.000 at (577, 1732)
+2025-12-28 20:58:46.306 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (518, 196), max=1.000 at (953, 1733)
+2025-12-28 20:58:46.309 | INFO     | __main__:game_logic:63 - 当前内存使用: 842.2MB, 保留对象数: 80
+2025-12-28 20:58:46.309 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 80/100
+2025-12-28 20:58:46.309 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 80/80
+2025-12-28 20:58:46.309 | WARNING  | core.base_game_script:_main_loop:194 - 内存使用过高: 842.2MB > 400MB，执行垃圾回收
+2025-12-28 20:58:46.315 | INFO     | core.base_game_script:_main_loop:198 - 垃圾回收后内存使用: 842.2MB
+2025-12-28 20:58:46.682 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (227, 1161), max=1.000 at (74, 1357)
+2025-12-28 20:58:46.732 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (781, 1323), max=1.000 at (674, 1369)
+2025-12-28 20:58:46.782 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (38, 179), max=1.000 at (608, 1248)
+2025-12-28 20:58:46.783 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 81/100
+2025-12-28 20:58:46.783 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 81/81
+2025-12-28 20:58:47.149 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (153, 360), max=1.000 at (276, 146)
+2025-12-28 20:58:47.200 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (383, 108), max=1.000 at (753, 668)
+2025-12-28 20:58:47.254 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (51, 1580), max=1.000 at (422, 1634)
+2025-12-28 20:58:47.255 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 82/100
+2025-12-28 20:58:47.255 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 82/82
+2025-12-28 20:58:47.637 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (480, 1845), max=1.000 at (402, 17)
+2025-12-28 20:58:47.689 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (731, 1604), max=1.000 at (188, 1379)
+2025-12-28 20:58:47.743 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (899, 554), max=1.000 at (38, 1778)
+2025-12-28 20:58:47.744 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 83/100
+2025-12-28 20:58:47.744 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 83/83
+2025-12-28 20:58:48.122 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (538, 469), max=1.000 at (1018, 586)
+2025-12-28 20:58:48.175 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (741, 1634), max=1.000 at (135, 1774)
+2025-12-28 20:58:48.224 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (297, 522), max=1.000 at (808, 1823)
+2025-12-28 20:58:48.226 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 84/100
+2025-12-28 20:58:48.226 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 84/84
+2025-12-28 20:58:48.591 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (986, 1052), max=1.000 at (80, 352)
+2025-12-28 20:58:48.640 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (536, 811), max=1.000 at (698, 604)
+2025-12-28 20:58:48.689 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (458, 1815), max=1.000 at (580, 1691)
+2025-12-28 20:58:48.691 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 85/100
+2025-12-28 20:58:48.691 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 85/85
+2025-12-28 20:58:49.047 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (932, 199), max=1.000 at (234, 966)
+2025-12-28 20:58:49.097 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (843, 1297), max=1.000 at (287, 1864)
+2025-12-28 20:58:49.148 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (602, 447), max=1.000 at (224, 143)
+2025-12-28 20:58:49.149 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 86/100
+2025-12-28 20:58:49.149 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 86/86
+2025-12-28 20:58:49.522 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (775, 693), max=1.000 at (340, 310)
+2025-12-28 20:58:49.576 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (393, 145), max=1.000 at (705, 550)
+2025-12-28 20:58:49.629 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (292, 113), max=1.000 at (890, 533)
+2025-12-28 20:58:49.631 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 87/100
+2025-12-28 20:58:49.631 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 87/87
+2025-12-28 20:58:50.027 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (746, 1582), max=1.000 at (71, 770)
+2025-12-28 20:58:50.082 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (837, 250), max=1.000 at (136, 1270)
+2025-12-28 20:58:50.140 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (986, 154), max=1.000 at (265, 712)
+2025-12-28 20:58:50.142 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 88/100
+2025-12-28 20:58:50.142 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 88/88
+2025-12-28 20:58:50.552 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (372, 879), max=1.000 at (626, 1590)
+2025-12-28 20:58:50.615 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (544, 687), max=1.000 at (266, 205)
+2025-12-28 20:58:50.673 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (567, 1421), max=1.000 at (176, 1501)
+2025-12-28 20:58:50.675 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 89/100
+2025-12-28 20:58:50.676 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 89/89
+2025-12-28 20:58:51.089 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (191, 1202), max=1.000 at (126, 1296)
+2025-12-28 20:58:51.147 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (891, 304), max=1.000 at (772, 1210)
+2025-12-28 20:58:51.205 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (769, 786), max=1.000 at (626, 534)
+2025-12-28 20:58:51.207 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 90/100
+2025-12-28 20:58:51.208 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 90/90
+2025-12-28 20:58:51.208 | DEBUG    | core.base_game_script:_main_loop:187 - 执行定期垃圾回收 (第90次循环)
+2025-12-28 20:58:51.611 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (675, 318), max=1.000 at (596, 1219)
+2025-12-28 20:58:51.666 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (435, 1337), max=1.000 at (175, 31)
+2025-12-28 20:58:51.722 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (980, 986), max=1.000 at (952, 1463)
+2025-12-28 20:58:51.724 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 91/100
+2025-12-28 20:58:51.725 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 91/91
+2025-12-28 20:58:52.111 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (197, 1021), max=1.000 at (792, 1682)
+2025-12-28 20:58:52.165 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (406, 1067), max=1.000 at (285, 1262)
+2025-12-28 20:58:52.219 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (915, 34), max=1.000 at (566, 1346)
+2025-12-28 20:58:52.221 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 92/100
+2025-12-28 20:58:52.222 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 92/92
+2025-12-28 20:58:52.594 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (816, 1172), max=1.000 at (675, 1305)
+2025-12-28 20:58:52.646 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (853, 355), max=1.000 at (722, 1823)
+2025-12-28 20:58:52.698 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (860, 756), max=1.000 at (420, 259)
+2025-12-28 20:58:52.699 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 93/100
+2025-12-28 20:58:52.700 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 93/93
+2025-12-28 20:58:53.078 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (687, 50), max=1.000 at (442, 941)
+2025-12-28 20:58:53.133 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (1024, 1346), max=1.000 at (833, 1819)
+2025-12-28 20:58:53.185 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (303, 964), max=1.000 at (444, 1208)
+2025-12-28 20:58:53.187 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 94/100
+2025-12-28 20:58:53.188 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 94/94
+2025-12-28 20:58:53.566 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (571, 1568), max=1.000 at (743, 39)
+2025-12-28 20:58:53.622 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (76, 1170), max=1.000 at (743, 944)
+2025-12-28 20:58:53.678 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (959, 1604), max=1.000 at (524, 1619)
+2025-12-28 20:58:53.681 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 95/100
+2025-12-28 20:58:53.682 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 95/95
+2025-12-28 20:58:54.083 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (824, 1602), max=1.000 at (1008, 1620)
+2025-12-28 20:58:54.142 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (884, 312), max=1.000 at (151, 1731)
+2025-12-28 20:58:54.199 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (510, 1245), max=1.000 at (41, 576)
+2025-12-28 20:58:54.201 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 96/100
+2025-12-28 20:58:54.202 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 96/96
+2025-12-28 20:58:54.606 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (149, 1023), max=1.000 at (995, 927)
+2025-12-28 20:58:54.665 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (556, 66), max=1.000 at (149, 1803)
+2025-12-28 20:58:54.723 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (120, 100), max=1.000 at (422, 1168)
+2025-12-28 20:58:54.726 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 97/100
+2025-12-28 20:58:54.727 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 97/97
+2025-12-28 20:58:55.141 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (968, 664), max=1.000 at (264, 37)
+2025-12-28 20:58:55.199 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (770, 528), max=1.000 at (89, 567)
+2025-12-28 20:58:55.256 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (951, 171), max=1.000 at (674, 748)
+2025-12-28 20:58:55.259 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 98/100
+2025-12-28 20:58:55.260 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 98/98
+2025-12-28 20:58:55.655 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (788, 1162), max=1.000 at (63, 1547)
+2025-12-28 20:58:55.711 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (930, 1485), max=1.000 at (431, 1589)
+2025-12-28 20:58:55.766 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (662, 280), max=1.000 at (612, 1116)
+2025-12-28 20:58:55.769 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 99/100
+2025-12-28 20:58:55.770 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 99/99
+2025-12-28 20:58:56.154 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (152, 1775), max=1.000 at (330, 804)
+2025-12-28 20:58:56.212 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (731, 1241), max=1.000 at (124, 666)
+2025-12-28 20:58:56.266 | DEBUG    | __main__:_simulate_game_operations:91 - 模拟匹配结果: min=0.000 at (21, 405), max=1.000 at (927, 1543)
+2025-12-28 20:58:56.269 | INFO     | __main__:game_logic:63 - 当前内存使用: 1040.0MB, 保留对象数: 100
+2025-12-28 20:58:56.270 | INFO     | core.base_game_script:_main_loop:179 - 循环执行次数: 100/100
+2025-12-28 20:58:56.270 | INFO     | core.base_game_script:_main_loop:181 - 当前执行成功次数: 100/100
+2025-12-28 20:58:56.271 | WARNING  | core.base_game_script:_main_loop:194 - 内存使用过高: 1040.0MB > 400MB，执行垃圾回收
+2025-12-28 20:58:56.277 | INFO     | core.base_game_script:_main_loop:198 - 垃圾回收后内存使用: 1040.0MB
+2025-12-28 20:58:56.383 | DEBUG    | core.base_game_script:_main_loop:211 - 主循环结束，执行最终垃圾回收
+2025-12-28 20:58:56.389 | INFO     | core.base_game_script:_main_loop:214 - 已完成100次循环，脚本将退出
+2025-12-28 20:58:56.390 | INFO     | core.base_game_script:stop:162 - 停止TestMemoryScript
+2025-12-28 20:58:56.467 | INFO     | __main__:on_stop:125 - 最终内存使用: 50.9MB
+2025-12-28 20:58:56.468 | INFO     | __main__:on_stop:127 - === 测试完成 ===
