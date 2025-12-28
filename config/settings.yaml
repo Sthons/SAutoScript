@@ -28,7 +28,7 @@ screen_capture:
   capture_delay: 0.1  # 屏幕捕获间隔(秒)
   use_delay: true  # 是否使用屏幕捕获延迟
   region: null  # 捕获区域，null表示全屏，格式: [x1, y1, x2, y2]
-  monitor: 1  # 捕获显示器
+  monitor: 0  # 捕获显示器
   resolution: [1920, 1080]  # 屏幕分辨率
 
 # 图像识别配置
@@ -48,7 +48,7 @@ input_control:
   key_delay: 0.05  # 键盘输入延迟（秒）
 
 
-# 窗口管理配置
+# 窗口管理配置[TODO]
 window_management:
   auto_focus: true  # 自动聚焦目标窗口
   window_title_pattern: ""  # 窗口标题匹配模式

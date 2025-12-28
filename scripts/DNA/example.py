@@ -63,7 +63,7 @@ class ExampleScript(BaseGameScript):
         result = self.game_ops.appear(
             "mod\\general\\again.png",  # 模板名称
             timeout=150,        # 超时时间(秒)
-            threshold=0.4,    # 匹配阈值
+            threshold=0.7,    # 匹配阈值
         )
         if result.get('found', False):
             # 点击 开始挑战 按钮 
@@ -81,8 +81,5 @@ if __name__ == "__main__":
     
     # 创建脚本实例
     script = ExampleScript()
-    screenshot = script.screen_capture.capture(False)
-    screenshot.save("C:\\Users\\53443\Desktop\\test_1.jpg")
-    # script.input_controller.move_mouse(3686, 1238)
     # 启动脚本
     script.start(1)
