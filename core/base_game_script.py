@@ -57,8 +57,10 @@ class BaseGameScript(ABC):
         self.success_num = 0
         
         # 循环控制
-        self.max_loops = self.config.get("script", {}).get("max_loops", 100)  # 默认最多执行100次循环
-        self.loop_delay = self.config.get("script", {}).get("loop_delay", 1)  # 默认循环间隔1秒
+        # 循环控制
+        loop_config = self.config.get("loop_control", {})
+        self.max_loops = loop_config.get("max_iterations", 100)  # 默认最多执行100次循环
+        self.loop_delay = loop_config.get("iteration_delay", 1)  # 默认循环间隔1秒
         
         # 内存优化配置
         memory_config = self.config.get("memory_optimization", {})
@@ -100,15 +102,15 @@ class BaseGameScript(ABC):
         """
         try:
             # 初始化屏幕捕获组件
-            screen_capture_config = self.config.get("screen", {})
+            screen_capture_config = self.config.get("screen_capture", {})
             self.screen_capture = ScreenCapture(screen_capture_config)
             
             # 初始化输入控制组件
-            input_controller_config = self.config.get("input", {})
+            input_controller_config = self.config.get("input_control", {})
             self.input_controller = InputController(input_controller_config)
             
             # 初始化图像识别组件
-            self.image_recognition = ImageRecognition(self.config.get("recognition", {}))
+            self.image_recognition = ImageRecognition(self.config.get("image_recognition", {}))
 
             # 初始化窗口定位组件
             self.window_locator = WindowLocator()
@@ -127,15 +129,15 @@ class BaseGameScript(ABC):
             log_exception(f"在{script_name}的_init_components方法中初始化组件时发生错误", script_name)
             raise
     
-    def start(self, max_loops=1, loop_delay=1):
+    def start(self, max_loops=None, loop_delay=None):
         """
         启动脚本
         """
         logger.info(f"启动{self.__class__.__name__}")
 
         # 设置循环次数和延迟
-        self.max_loops = max_loops  # 最多执行 x 次循环
-        self.loop_delay = loop_delay  # 循环间隔 x 秒
+        if max_loops: self.max_loops = max_loops  # 最多执行 x 次循环
+        if loop_delay: self.loop_delay = loop_delay  # 循环间隔 x 秒
 
         self.running = True
         
