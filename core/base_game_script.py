@@ -8,6 +8,7 @@ import random
 import yaml
 from abc import ABC, abstractmethod
 from loguru import logger
+import gc
 
 from image_recognition import ImageRecognition
 from input_controller import InputController

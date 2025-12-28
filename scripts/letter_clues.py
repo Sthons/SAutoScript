@@ -62,8 +62,8 @@ class MyGameScript(BaseGameScript):
         # 判断起点类型
         spawn_check_result = self.game_ops.appear(
             "mod\\entrust\\letter_clues\\spawn2.png",  # 起点 1
-            timeout=5,        # 超时时间(秒)
-            threshold=0.8,    # 匹配阈值
+            timeout=10,        # 超时时间(秒)
+            threshold=0.7,    # 匹配阈值
         )
         if spawn_check_result.get('found', False):
 

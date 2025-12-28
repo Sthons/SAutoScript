@@ -60,7 +60,7 @@ class MyGameScript(BaseGameScript):
         self.input_controller.click(button='middle')
 
         # 向左移动人物视角
-        self.input_controller.move_mouse(x - 220, y)
+        self.input_controller.move_mouse(x - 220, y, duration=0.3)
 
         # 按住 w 键 保持前进
         self.input_controller.key_down('w')
@@ -72,7 +72,7 @@ class MyGameScript(BaseGameScript):
         self.input_controller.click(button='middle')
 
         # 向下移动人物视角
-        self.input_controller.move_mouse(x, y+400)
+        self.input_controller.move_mouse(x, y+400, duration=0.3)
 
         # 按住 ctrl space 键 已实现游戏人物飞跃
         self.input_controller.hotkey('ctrl', 'space') 
@@ -95,7 +95,7 @@ class MyGameScript(BaseGameScript):
         time.sleep(0.1)
 
         # 向左移动人物视角
-        self.input_controller.move_mouse(x - 280, y)
+        self.input_controller.move_mouse(x - 280, y, duration=0.3)
         
         # 按住 shift 键 进入奔跑状态
         self.input_controller.key_down('shift')
@@ -181,22 +181,32 @@ class MyGameScript(BaseGameScript):
             self.game_ops.appear_then_click(
                 "mod\\general\\again.png",  # 模板名称
                 timeout=5,        # 超时时间(秒)
-                threshold=0.6,    # 匹配阈值
+                threshold=0.7,    # 匹配阈值
                 click_delay=5   # 点击后延迟
             )
+
+            
 
         else:
             # 成功执行次数+1
             self.success_num += 1
 
+        # 使用 委托手册·一
+        self.input_controller.click(
+            x=self.game_window_rect['left']+ int(788/1920*self.game_window_rect['width']), 
+            y=self.game_window_rect['top']+ int(580/1080*self.game_window_rect['height']),
+            button='left', 
+            clicks=1
+        )
+
         # 点击 开始挑战 按钮
         self.game_ops.appear_then_click(
             "mod\\general\\raid_start.png",  # 模板名称
             timeout=5,        # 超时时间(秒)
-            threshold=0.6,    # 匹配阈值
+            threshold=0.7,    # 匹配阈值
             click_delay=random.randint(2, 6)   # 点击后延迟
         )
-        time.sleep(10)
+        time.sleep(8)
 
         # # 重进副本后呼出 esc 菜单
         # self.input_controller.key_press('esc') 

@@ -10,7 +10,7 @@ from loguru import logger
 # 添加核心模块路径
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'core'))
 
-from base_game_script import BaseGameScript
+from core.base_game_script import BaseGameScript
 
 class MyGameScript(BaseGameScript):
 
