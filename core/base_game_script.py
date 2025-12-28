@@ -9,13 +9,24 @@ import yaml
 from abc import ABC, abstractmethod
 from loguru import logger
 import gc
+import psutil  # 用于内存监控
 
-from image_recognition import ImageRecognition
-from input_controller import InputController
-from screen_capture import ScreenCapture
-from game_operations import GameOperations, GameStuckError, GameTooManyClickError
-from window_locator import WindowLocator
-from error_logger import log_exception
+# 绝对导入
+try:
+    from .image_recognition import ImageRecognition
+    from .input_controller import InputController
+    from .screen_capture import ScreenCapture
+    from .game_operations import GameOperations, GameStuckError, GameTooManyClickError
+    from .window_locator import WindowLocator
+    from .error_logger import log_exception
+except ImportError:
+    # 处理独立运行时的导入
+    from core.image_recognition import ImageRecognition
+    from core.input_controller import InputController
+    from core.screen_capture import ScreenCapture
+    from core.game_operations import GameOperations, GameStuckError, GameTooManyClickError
+    from core.window_locator import WindowLocator
+    from core.error_logger import log_exception
 
 
 class BaseGameScript(ABC):
@@ -48,6 +59,14 @@ class BaseGameScript(ABC):
         # 循环控制
         self.max_loops = self.config.get("script", {}).get("max_loops", 100)  # 默认最多执行100次循环
         self.loop_delay = self.config.get("script", {}).get("loop_delay", 1)  # 默认循环间隔1秒
+        
+        # 内存优化配置
+        memory_config = self.config.get("memory_optimization", {})
+        self.gc_frequency = memory_config.get("gc_frequency", 50)  # 垃圾回收频率
+        self.memory_threshold_mb = memory_config.get("memory_threshold_mb", 400)  # 内存阈值(MB)
+        self.enable_smart_gc = memory_config.get("enable_smart_gc", True)  # 启用智能GC
+        self.enable_memory_monitoring = memory_config.get("enable_memory_monitoring", True)  # 启用内存监控
+        self.memory_check_frequency = memory_config.get("memory_check_frequency", 20)  # 内存检查频率
         
         logger.info(f"{self.__class__.__name__}初始化完成")
     
@@ -148,7 +167,7 @@ class BaseGameScript(ABC):
     
     def _main_loop(self):
         """
-        主循环
+        主循环 - 集成智能垃圾回收
         """
         loop_count = 0
         
@@ -161,6 +180,22 @@ class BaseGameScript(ABC):
                 if self.success_num:
                     logger.info(f"当前执行成功次数: {self.success_num}/{loop_count}")
 
+                # 智能垃圾回收逻辑
+                if self.enable_smart_gc:
+                    # 定期垃圾回收
+                    if loop_count % self.gc_frequency == 0:
+                        logger.debug(f"执行定期垃圾回收 (第{loop_count}次循环)")
+                        gc.collect()
+                    
+                    # 内存监控
+                    if self.enable_memory_monitoring and loop_count % self.memory_check_frequency == 0:
+                        memory_mb = self._get_memory_usage()
+                        if memory_mb > self.memory_threshold_mb:
+                            logger.warning(f"内存使用过高: {memory_mb:.1f}MB > {self.memory_threshold_mb}MB，执行垃圾回收")
+                            gc.collect()
+                            # 再次检查内存使用
+                            memory_after_gc = self._get_memory_usage()
+                            logger.info(f"垃圾回收后内存使用: {memory_after_gc:.1f}MB")
                 
                 # 每次循环后添加延迟
                 time.sleep(self.loop_delay)
@@ -171,7 +206,28 @@ class BaseGameScript(ABC):
                 log_exception(f"在{script_name}的主循环第{loop_count+1}次迭代中发生错误", script_name)
                 break
         
+        # 循环结束时的最终垃圾回收
+        if self.enable_smart_gc:
+            logger.debug("主循环结束，执行最终垃圾回收")
+            gc.collect()
+        
         logger.info(f"已完成{loop_count}次循环，脚本将退出")
+    
+    def _get_memory_usage(self):
+        """
+        获取当前进程的内存使用量(MB)
+        
+        Returns:
+            float: 内存使用量(MB)
+        """
+        try:
+            process = psutil.Process()
+            memory_info = process.memory_info()
+            memory_mb = memory_info.rss / 1024 / 1024  # 转换为MB
+            return memory_mb
+        except Exception as e:
+            logger.warning(f"获取内存使用量失败: {e}")
+            return 0.0
     
     @abstractmethod
     def game_logic(self):
@@ -244,6 +300,5 @@ class BaseGameScript(ABC):
             self.input_controller.move_mouse(random.randint(0, 3440), random.randint(0, 2560), 3)
             time.sleep(3)
             self.input_controller.move_mouse(random.randint(0, 3440), random.randint(0, 2560), 3)
-
 
         pass

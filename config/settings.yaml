@@ -44,3 +44,12 @@ performance:
   max_cpu_usage: 50  # 最大CPU使用率(%)
   max_memory_usage: 1024  # 最大内存使用量(MB)
   thread_pool_size: 4  # 线程池大小
+
+# 内存优化配置
+memory_optimization:
+  gc_frequency: 30  # 垃圾回收频率：每30次循环执行一次GC
+  memory_threshold_mb: 400  # 内存阈值：400MB时触发GC
+  enable_smart_gc: true  # 启用智能垃圾回收
+  enable_memory_monitoring: true  # 启用内存监控
+  memory_check_frequency: 20  # 内存检查频率：每20次循环检查一次内存
+  gc_log_level: "DEBUG"  # GC日志级别
