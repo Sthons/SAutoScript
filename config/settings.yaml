@@ -1,10 +1,14 @@
 # DNAAS 游戏自动脚本系统配置文件
 
 # 屏幕捕获配置
-screen:
+# 屏幕捕获配置
+screen_capture:
+  # capture_method: "pil"  # 截图方法："pil"、"pyautogui"、"mss" [TODO]
+  quality: "high"  # 截图质量："low"、"medium"、"high"
+  capture_delay: 0.1  # 屏幕捕获间隔(秒)
   use_delay: true  # 是否使用屏幕捕获延迟
-  capture_interval: 0.1  # 屏幕捕获间隔(秒)
   region: null  # 捕获区域，null表示全屏，格式: [x1, y1, x2, y2]
+  monitor: 1  # 捕获显示器
   resolution: [1920, 1080]  # 屏幕分辨率
   
 # 应用程序配置文件
@@ -44,11 +48,7 @@ input_control:
   mouse_speed: 1.0  # 鼠标移动速度倍数
   key_delay: 0.05  # 键盘输入延迟（秒）
 
-# 屏幕捕获配置
-screen_capture:
-  capture_method: "pil"  # 截图方法："pil"、"pyautogui"、"mss"
-  quality: "high"  # 截图质量："low"、"medium"、"high"
-  capture_delay: 0.1  # 截图延迟（秒）
+
 
 # 窗口管理配置
 window_management:

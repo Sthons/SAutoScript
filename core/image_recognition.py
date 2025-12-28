@@ -185,7 +185,7 @@ class ImageRecognition:
             logger.error(f"加载模板图像失败: {e}")
             return None
     
-    def find_template(self, screenshot: np.ndarray, template_name: str) -> Optional[Tuple[int, int]]:
+    def find_template(self, screenshot: np.ndarray, template_name: str, threshold: Optional[float] = None) -> Optional[Tuple[int, int]]:
         """在截图中查找模板
         
         Args:
@@ -218,15 +218,18 @@ class ImageRecognition:
                 result = cv2.matchTemplate(screenshot_gray, template, self.method)
                 np.copyto(match_result, result)
                 
+                # 使用传入的阈值或默认阈值
+                match_threshold = threshold if threshold is not None else self.threshold
+                
                 min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(match_result)
                 
-                if max_val >= self.threshold:
+                if max_val >= match_threshold:
                     x, y = max_loc
                     logger.debug(f"找到模板 '{template_name}' 位置: ({x}, {y}), 相似度: {max_val:.3f}")
-                    return (x, y)
+                    return {"found": True, "template_name": template_name,"position":(x, y)}
                     
                 logger.debug(f"未找到模板 '{template_name}', 最高相似度: {max_val:.3f}")
-                return None
+                return {"found": False, "template_name": template_name}
                 
             finally:
                 # 归还数组到对象池

@@ -16,6 +16,7 @@ class ScreenCapture:
     def __init__(self, config=None):
         self.config = config or {}
         self.region = self.config.get("region", None)
+        self.sct_monitor = self.config.get("monitor", 0)  # 主显示器
         self.resolution = self.config.get("resolution", [1920, 1080])
         self.use_delay = self.config.get("use_delay", True)  # 是否使用延迟，默认使用
         self.delay = self.config.get("delay", 0.01)  # 默认延迟0.01秒
@@ -32,7 +33,7 @@ class ScreenCapture:
         """设置捕获区域"""
         if self.region is None:
             # 全屏捕获
-            self.monitor = self.sct.monitors[0]  # 主显示器
+            self.monitor = self.sct.monitors[self.sct_monitor]  # 显示器
         else:
             # 指定区域捕获
             x1, y1, x2, y2 = self.region

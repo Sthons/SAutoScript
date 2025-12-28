@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 from core.base_game_script import BaseGameScript
 
-class MyGameScript(BaseGameScript):
+class ExampleScript(BaseGameScript):
 
     def __init__(self, config_path=None):
         # 调用父类初始化方法
@@ -54,21 +54,20 @@ class MyGameScript(BaseGameScript):
         """
         游戏逻辑，子类必须实现此方法
         """
-        
+        # time.sleep(60)
+        # 鼠标回归
+        self.input_controller.move_mouse(self.game_window_center_point["left"], self.game_window_center_point["top"])
+        self.input_controller.click(button="middle")
+
         # 结束状态识别 
         result = self.game_ops.appear(
-            "mod\\general\\finish.png",  # 模板名称
-            timeout=10,        # 超时时间(秒)
-            threshold=0.8,    # 匹配阈值
+            "mod\\general\\again.png",  # 模板名称
+            timeout=150,        # 超时时间(秒)
+            threshold=0.4,    # 匹配阈值
         )
-        if not result.get('found', False):
+        if result.get('found', False):
             # 点击 开始挑战 按钮 
-            self.game_ops.appear_then_click(
-                "mod\\general\\raid_start.png",  # 模板名称
-                timeout=10,        # 超时时间(秒)
-                threshold=0.6,    # 匹配阈值
-                click_delay=random.randint(8, 15)   # 点击后延迟
-            )
+            self.input_controller.key_press('r')
 
     
     def on_stop(self):
@@ -81,7 +80,7 @@ if __name__ == "__main__":
     logger.info("启动自定义游戏脚本...")
     
     # 创建脚本实例
-    script = MyGameScript()
+    script = ExampleScript()
     
     # 启动脚本
-    script.start(100000)
+    script.start(1)
