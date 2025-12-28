@@ -5,7 +5,7 @@ screen:
   use_delay: true  # 是否使用屏幕捕获延迟
   capture_interval: 0.1  # 屏幕捕获间隔(秒)
   region: null  # 捕获区域，null表示全屏，格式: [x1, y1, x2, y2]
-  resolution: [1280, 720]  # 屏幕分辨率
+  resolution: [1920, 1080]  # 屏幕分辨率
   
 # 应用程序配置文件
 app:

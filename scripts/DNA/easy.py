@@ -8,7 +8,7 @@ import random
 from loguru import logger
 
 # 添加核心模块路径
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'core'))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 from core.base_game_script import BaseGameScript
 
@@ -22,8 +22,6 @@ class MyGameScript(BaseGameScript):
         self.game_window_rect = {} # 初始化游戏窗口信息
         self.game_window_center_point = {} # 初始化游戏窗口中心坐标
         
-        logger.info("夜航手册-65 初始化完成")
-
 
     def on_start(self):
         logger.info("游戏窗口定位中...")
@@ -31,7 +29,7 @@ class MyGameScript(BaseGameScript):
         logger.info("目前所有窗口：")
         # logger.info(self.window_locator.list_windows())
         
-        game_window = self.window_locator.get_window_rect(window_title="TheSpellBrigade")
+        game_window = self.window_locator.get_window_rect(window_title="二重螺旋")
 
         
         # if not game_window:
@@ -57,20 +55,20 @@ class MyGameScript(BaseGameScript):
         游戏逻辑，子类必须实现此方法
         """
         
-        # # 点击 开始挑战 按钮 
-        # logger.info(self.game_ops.appear(
-        #     "mod\\general\\runaway.png",  # 模板名称
-        #     timeout=10,        # 超时时间(秒)
-        #     threshold=0.8,    # 匹配阈值
-        # ))
-        self.game_ops.appear_then_click(
-            "mod\\test\\test_img.png",  # 模板名称
-            timeout=600,        # 超时时间(秒)
-            threshold=0.6,    # 匹配阈值
-            click_delay=1   # 点击后延迟
+        # 结束状态识别 
+        result = self.game_ops.appear(
+            "mod\\general\\finish.png",  # 模板名称
+            timeout=10,        # 超时时间(秒)
+            threshold=0.8,    # 匹配阈值
         )
-
-        self.input_controller.click(button='left', x=self.game_window_center_point['left'], y=self.game_window_center_point['top'])
+        if not result.get('found', False):
+            # 点击 开始挑战 按钮 
+            self.game_ops.appear_then_click(
+                "mod\\general\\raid_start.png",  # 模板名称
+                timeout=10,        # 超时时间(秒)
+                threshold=0.6,    # 匹配阈值
+                click_delay=random.randint(8, 15)   # 点击后延迟
+            )
 
     
     def on_stop(self):
