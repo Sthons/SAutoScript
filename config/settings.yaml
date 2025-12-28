@@ -7,20 +7,81 @@ screen:
   region: null  # 捕获区域，null表示全屏，格式: [x1, y1, x2, y2]
   resolution: [1280, 720]  # 屏幕分辨率
   
-# 图像识别配置
-recognition:
-  threshold: 0.8  # 图像匹配阈值(0-1)
-  method: "cv2.TM_CCOEFF_NORMED"  # 匹配方法
-  template_dir: "assets/templates"  # 模板图像目录
+# 应用程序配置文件
+app:
+  name: "DNAAS - 游戏自动化脚本"
+  version: "1.0.0"
+  debug: true
+  log_level: "DEBUG"
+
+# 循环控制配置
+loop_control:
+  max_iterations: -1  # -1表示无限循环，正数表示最大迭代次数
+  iteration_delay: 0.1  # 每次迭代之间的延迟（秒）
   
+# 内存优化配置
+memory_optimization:
+  enable_smart_gc: true  # 启用智能垃圾回收
+  gc_frequency: 10  # 每隔多少次循环执行一次垃圾回收
+  memory_threshold_mb: 400  # 内存使用阈值（MB），超过时执行垃圾回收
+  enable_memory_monitoring: true  # 启用内存监控
+  memory_check_frequency: 5  # 每隔多少次循环检查一次内存
+  gc_log_level: "DEBUG"  # 垃圾回收日志级别
+
+# 图像识别配置
+image_recognition:
+  threshold: 0.8  # 模板匹配阈值
+  method: "cv2.TM_CCOEFF_NORMED"  # 模板匹配方法
+  template_dir: "assets/templates"  # 模板图像目录
+  # 对象池配置
+  object_pool:
+    enabled: true  # 是否启用对象池
+    max_size: 50  # 对象池最大大小
+    
 # 输入控制配置
-input:
-  overlimit_detection: false  # 是否开启超量识别检测
-  use_delay: true  # 是否使用输入延迟
-  delay: 0.05  # 输入延迟(秒)
-  move_duration: 0.2  # 鼠标移动持续时间(秒)
-  click_duration: 0.1  # 鼠标点击持续时间(秒)
-  key_duration: 0.05  # 按键持续时间(秒)
+input_control:
+  input_delay: 0.1  # 输入延迟（秒）
+  mouse_speed: 1.0  # 鼠标移动速度倍数
+  key_delay: 0.05  # 键盘输入延迟（秒）
+
+# 屏幕捕获配置
+screen_capture:
+  capture_method: "pil"  # 截图方法："pil"、"pyautogui"、"mss"
+  quality: "high"  # 截图质量："low"、"medium"、"high"
+  capture_delay: 0.1  # 截图延迟（秒）
+
+# 窗口管理配置
+window_management:
+  auto_focus: true  # 自动聚焦目标窗口
+  window_title_pattern: ""  # 窗口标题匹配模式
+  bring_to_front: true  # 将窗口置于前台
+
+# 错误处理配置
+error_handling:
+  max_retries: 3  # 最大重试次数
+  retry_delay: 1.0  # 重试延迟（秒）
+  ignore_errors: false  # 是否忽略错误继续执行
+  
+# 性能监控配置
+performance:
+  enable_profiling: false  # 启用性能分析
+  profile_interval: 60  # 性能分析间隔（秒）
+  log_performance_metrics: false  # 记录性能指标
+  max_cpu_usage: 50  # 最大CPU使用率(%)
+  max_memory_usage: 1024  # 最大内存使用量(MB)
+  thread_pool_size: 4  # 线程池大小
+
+# 通知配置
+notifications:
+  enable_desktop_notifications: false  # 启用桌面通知
+  notify_on_completion: true  # 完成时通知
+  notify_on_error: true  # 错误时通知
+
+# 插件配置
+plugins:
+  enabled: false  # 启用插件系统
+  plugin_dir: "plugins"  # 插件目录
+  auto_load: true  # 自动加载插件
   
 # 日志配置
 logging:
@@ -38,18 +99,3 @@ game:
 script:
   auto_start: false  # 是否自动启动脚本
   script_file: "scripts/example.py"  # 默认脚本文件
-  
-# 性能配置
-performance:
-  max_cpu_usage: 50  # 最大CPU使用率(%)
-  max_memory_usage: 1024  # 最大内存使用量(MB)
-  thread_pool_size: 4  # 线程池大小
-
-# 内存优化配置
-memory_optimization:
-  gc_frequency: 30  # 垃圾回收频率：每30次循环执行一次GC
-  memory_threshold_mb: 400  # 内存阈值：400MB时触发GC
-  enable_smart_gc: true  # 启用智能垃圾回收
-  enable_memory_monitoring: true  # 启用内存监控
-  memory_check_frequency: 20  # 内存检查频率：每20次循环检查一次内存
-  gc_log_level: "DEBUG"  # GC日志级别
