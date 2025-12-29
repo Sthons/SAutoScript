@@ -23,7 +23,7 @@ memory_optimization:
 
 # 屏幕捕获配置
 screen_capture:
-  capture_method: "mss"  # 截图方法："pil"、"pyautogui"、"mss"
+  capture_method: "mss"  # 截图方法："pil"、"pyautogui"、"mss"  # 特别注意：使用mss时需修改屏幕缩放为100%
   quality: "high"  # 截图质量："low"、"medium"、"high"
   capture_delay: 0.1  # 屏幕捕获间隔(秒)
   use_delay: true  # 是否使用屏幕捕获延迟
@@ -44,7 +44,7 @@ image_recognition:
 # 输入控制配置
 input_control:
   input_delay: 0.1  # 输入延迟（秒）
-  mouse_speed: 1.0  # 鼠标移动速度倍数
+  move_duration: 0.2  # 鼠标移动时间（秒）
   key_delay: 0.05  # 键盘输入延迟（秒）
 
 

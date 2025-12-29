@@ -82,4 +82,9 @@ if __name__ == "__main__":
     # 创建脚本实例
     script = ExampleScript()
     # 启动脚本
-    script.start(1)
+    # script.start(1)
+    # screen_capture = script.screen_capture.capture_region(0,0,6000,1600, False)
+    # screen_capture.save("C:\\Users\\53443\\Desktop\\test_3.jpg")
+    print(script.screen_capture.sct.monitors[0])
+    print(script.screen_capture.sct.monitors[1])
+    print(script.screen_capture.sct.monitors[2])

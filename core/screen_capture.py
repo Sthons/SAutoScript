@@ -95,6 +95,15 @@ class ScreenCapture:
                 # PIL和pyautogui直接使用region参数
                 self.monitor = None
     
+    def get_monitor_count(self):
+        """获取连接的显示器数量"""
+        if self.capture_method == "mss":
+            return len(self.sct.monitors) - 1  # 减1因为第一个是虚拟显示器
+        elif self.capture_method == "pyautogui":
+            return len(pyautogui.screens())
+        else:
+            return 1  # PIL 默认返回1
+
     def capture(self, as_numpy=True):
         """捕获屏幕"""
         try:
@@ -119,7 +128,7 @@ class ScreenCapture:
                 
                 if self.region is None:
                     # 全屏捕获
-                    screenshot = ImageGrab.grab()
+                    screenshot = ImageGrab.grab(all_screens=True)
                 else:
                     # 区域捕获
                     x1, y1, x2, y2 = self.region
@@ -284,7 +293,7 @@ class ScreenCapture:
             elif self.capture_method == "pil":
                 from PIL import ImageGrab
                 # 使用PIL获取屏幕尺寸
-                screen = ImageGrab.grab()
+                screen = ImageGrab.grab(all_screens=True)
                 return (screen.width, screen.height)
             elif self.capture_method == "pyautogui":
                 import pyautogui
