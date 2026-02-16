@@ -180,7 +180,9 @@ class MyGameScript(BaseGameScript):
                 "mod\\pause\\give_up_the_challenge.png",  # 模板名称
                 timeout=5,        # 超时时间(秒)
                 threshold=0.65,    # 匹配阈值
-                click_delay=3   # 点击后延迟
+                click_delay=3,   # 点击后延迟
+                offect_x=random.randint(30, 50),
+                offect_y=random.randint(20, 40)
             )
 
             # 在出现的弹窗中点击确定
