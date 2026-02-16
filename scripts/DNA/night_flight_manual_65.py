@@ -166,7 +166,9 @@ class MyGameScript(BaseGameScript):
             "mod\\general\\again.png",  # 模板名称
             timeout=150,        # 超时时间(秒)
             threshold=0.65,    # 匹配阈值
-            click_delay=20   # 点击后延迟
+            click_delay=random.randint(5, 10),   # 点击后延迟
+            offect_x=random.randint(10, 20),
+            offect_y=random.randint(10, 15)
         ):
             # 卡关
 
@@ -194,7 +196,9 @@ class MyGameScript(BaseGameScript):
                 "mod\\general\\again.png",  # 模板名称
                 timeout=5,        # 超时时间(秒)
                 threshold=0.65,    # 匹配阈值
-                click_delay=5   # 点击后延迟
+                click_delay=5,   # 点击后延迟
+                offect_x=random.randint(10, 20),
+                offect_y=random.randint(10, 15)
             )
 
             
@@ -216,7 +220,7 @@ class MyGameScript(BaseGameScript):
             "mod\\general\\raid_start.png",  # 模板名称
             timeout=5,        # 超时时间(秒)
             threshold=0.7,    # 匹配阈值
-            click_delay=random.randint(2, 6)   # 点击后延迟
+            click_delay=random.randint(2, 4)   # 点击后延迟
         )
         time.sleep(8)
 

@@ -149,11 +149,21 @@ class BaseGameScript(ABC):
             self._main_loop()
         except KeyboardInterrupt:
             logger.info("接收到中断信号，正在停止...")
+            if self.success_num:
+                logger.info(f"======================================")
+                logger.info(f"中断前执行成功次数: {self.success_num}")
+                logger.info(f"======================================")
+
         except Exception as e:
             logger.error(f"运行时错误: {e}")
             # 记录错误到以时间命名的日志文件
             script_name = self.__class__.__name__
             log_exception(f"在{script_name}的start方法中发生错误", script_name)
+            if self.success_num:
+                logger.info(f"======================================")
+                logger.info(f"异常终止前执行成功次数: {self.success_num}")
+                logger.info(f"======================================")
+
         finally:
             self.stop()
     
@@ -178,9 +188,11 @@ class BaseGameScript(ABC):
                 # 调用游戏逻辑
                 self.game_logic()
                 loop_count += 1
+                logger.info(f"======================================")
                 logger.info(f"循环执行次数: {loop_count}/{self.max_loops}")
                 if self.success_num:
                     logger.info(f"当前执行成功次数: {self.success_num}/{loop_count}")
+                logger.info(f"======================================")
 
                 # 智能垃圾回收逻辑
                 if self.enable_smart_gc:
