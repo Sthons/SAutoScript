@@ -8,9 +8,9 @@ import random
 from loguru import logger
 
 # 添加核心模块路径
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'core'))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
-from base_game_script import BaseGameScript
+from core.base_game_script import BaseGameScript
 
 class MyGameScript(BaseGameScript):
 
@@ -55,6 +55,16 @@ class MyGameScript(BaseGameScript):
         
         # 设置鼠标位置到游戏窗口中心
         self.input_controller.set_mouse_position(x, y)
+        for _ in range(3):
+            for flag in range(3):
+                if flag == 0:
+                    self.input_controller.key_press('space')
+                self.input_controller.move_mouse(x - random.randint(-500, 500) , y - random.randint(-200, 200), duration=1)
+        # 点击鼠标中键 重置鼠标信号
+        self.input_controller.click(button='middle')
+        time.sleep(4)
+
+        self.input_controller.set_mouse_position(x, y)
 
         # 点击鼠标中键 重置鼠标信号
         self.input_controller.click(button='middle')
@@ -66,13 +76,13 @@ class MyGameScript(BaseGameScript):
         self.input_controller.key_down('w')
         
         # 设置鼠标位置到游戏窗口中心
-        self.input_controller.set_mouse_position(x, y)
+        self.input_controller.set_mouse_position(x, y, duration=0)
 
         # 点击鼠标中键 重置鼠标信号
-        self.input_controller.click(button='middle')
+        self.input_controller.click(button='middle', duration=0)
 
         # 向下移动人物视角
-        self.input_controller.move_mouse(x, y+400, duration=0.3)
+        self.input_controller.move_mouse(x, y+400, duration=0.2)
 
         # 按住 ctrl space 键 已实现游戏人物飞跃
         self.input_controller.hotkey('ctrl', 'space') 
@@ -87,12 +97,12 @@ class MyGameScript(BaseGameScript):
         # 按住鼠标左键触发下落攻击
         self.input_controller.click('left', clicks=2)
 
-        # 设置鼠标位置到游戏窗口中心
+        # # 设置鼠标位置到游戏窗口中心
         self.input_controller.set_mouse_position(x, y)
 
         # 点击鼠标中键 重置鼠标信号
         self.input_controller.click(button='middle')
-        time.sleep(0.1)
+        time.sleep(0.2)
 
         # 向左移动人物视角
         self.input_controller.move_mouse(x - 280, y, duration=0.3)
@@ -106,6 +116,8 @@ class MyGameScript(BaseGameScript):
         self.input_controller.hotkey('ctrl', 'space') 
 
         time.sleep(2)
+
+        self.input_controller.key_press('a', 2)
 
         # 按住 ctrl space 键 已实现游戏人物飞跃
         self.input_controller.hotkey('ctrl', 'space') 
@@ -140,20 +152,20 @@ class MyGameScript(BaseGameScript):
 
         time.sleep(10)
 
-        # 插入 默认 随机事件
-        self.random_event()
-
-        # 插入 默认 随机事件
-        self.random_event()
-
         # 用 二命 赛琪时额外按下q键
         self.input_controller.key_press('q')
+
+        # 插入 默认 随机事件
+        self.random_event()
+
+        # 插入 默认 随机事件
+        self.random_event()
 
         # 判断是否通关
         if not self.game_ops.appear_then_click(
             "mod\\general\\again.png",  # 模板名称
             timeout=150,        # 超时时间(秒)
-            threshold=0.7,    # 匹配阈值
+            threshold=0.65,    # 匹配阈值
             click_delay=20   # 点击后延迟
         ):
             # 卡关
@@ -165,7 +177,7 @@ class MyGameScript(BaseGameScript):
             self.game_ops.appear_then_click(
                 "mod\\pause\\give_up_the_challenge.png",  # 模板名称
                 timeout=5,        # 超时时间(秒)
-                threshold=0.7,    # 匹配阈值
+                threshold=0.65,    # 匹配阈值
                 click_delay=3   # 点击后延迟
             )
 
@@ -173,7 +185,7 @@ class MyGameScript(BaseGameScript):
             self.game_ops.appear_then_click(
                 "mod\\general\\entry.png",  # 模板名称
                 timeout=5,        # 超时时间(秒)
-                threshold=0.6,    # 匹配阈值
+                threshold=0.65,    # 匹配阈值
                 click_delay=5   # 点击后延迟
             )
             
@@ -181,7 +193,7 @@ class MyGameScript(BaseGameScript):
             self.game_ops.appear_then_click(
                 "mod\\general\\again.png",  # 模板名称
                 timeout=5,        # 超时时间(秒)
-                threshold=0.7,    # 匹配阈值
+                threshold=0.65,    # 匹配阈值
                 click_delay=5   # 点击后延迟
             )
 

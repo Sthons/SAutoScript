@@ -112,7 +112,8 @@ class GameOperations:
         logger.warning(f"等待模板消失超时: {template_name}")
         return False
     
-    def appear_then_click(self, template_name, button="left", clicks=1, timeout=None, interval=None, threshold=None, click_delay=None):
+    def appear_then_click(self, template_name, button="left", clicks=1, 
+        timeout=None, interval=None, threshold=None, click_delay=None, offect_x=0, offect_y=0):
         """等待图像出现并点击，返回是否成功
         
         Args:
@@ -123,6 +124,8 @@ class GameOperations:
             interval: 检查间隔(秒)，None表示使用默认值
             threshold: 匹配阈值，None表示使用默认值
             click_delay: 点击后延迟(秒)，None表示使用默认值
+            offect_x: 点击坐标x轴偏移量
+            offect_y: 点击坐标y轴偏移量
             
         Returns:
             bool: 是否成功点击
@@ -136,7 +139,9 @@ class GameOperations:
         
         # 获取位置
         x, y = result["position"]
-        
+        x+=offect_x
+        y+=offect_y
+
         # 检查点击次数
         if self.input_controller.overlimit_detection:
             self._check_click_count(template_name)
@@ -252,23 +257,7 @@ class GameOperations:
             logger.debug(f"成功按下组合键: {' + '.join(keys)}，当模板出现: {template_name}")
         
         return success
-    
-    def wait_and_click(self, template_name, button="left", clicks=1, timeout=None, interval=None, threshold=None):
-        """等待图像出现并点击，与appear_then_click功能相同，提供更直观的名称
-        
-        Args:
-            template_name: 模板图像名称
-            button: 鼠标按钮，默认为左键
-            clicks: 点击次数，默认为1次
-            timeout: 超时时间(秒)，None表示使用默认值
-            interval: 检查间隔(秒)，None表示使用默认值
-            threshold: 匹配阈值，None表示使用默认值
-            
-        Returns:
-            bool: 是否成功点击
-        """
-        return self.appear_then_click(template_name, button, clicks, timeout, interval, threshold)
-    
+
     def reset_click_count(self, template_name=None):
         """重置点击计数
         
