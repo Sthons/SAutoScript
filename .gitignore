@@ -1,6 +1,10 @@
 .venv
 core/__pycache__
 logs/errors
-assets/templates
+assets/templates/mod/entrust
+assets/templates/mod/general
+assets/templates/mod/pause
+assets/templates/map_model.py
+assets/templates/mapping.json
 scripts/DNA
 test/
