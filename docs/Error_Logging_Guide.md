@@ -174,7 +174,7 @@ if log_files:
 ```yaml
 logging:
   level: INFO
-  file: logs/dnaas.log
+  file: logs/SAutoScript.log
   rotation: "10 MB"
   
 # 错误日志特定配置

@@ -19,8 +19,8 @@ logger = logging.getLogger(__name__)
 def check_python_version():
     """检查Python版本"""
     version = sys.version_info
-    if version.major < 3 or (version.major == 3 and version.minor < 7):
-        logger.error(f"Python版本过低: {version.major}.{version.minor}，需要Python 3.7或更高版本")
+    if version.major < 3 or (version.major == 3 and version.minor < 10):
+        logger.error(f"Python版本过低: {version.major}.{version.minor}，需要Python 3.10 或更高版本")
         return False
     
     logger.info(f"Python版本检查通过: {version.major}.{version.minor}.{version.micro}")
@@ -136,7 +136,7 @@ def check_windows_permissions():
 
 def main():
     """主安装流程"""
-    logger.info("开始安装DNAAS游戏自动脚本系统...")
+    logger.info("开始安装SAutoScript游戏自动脚本系统...")
     
     # 检查Python版本
     if not check_python_version():
@@ -158,14 +158,7 @@ def main():
     if not install_requirements():
         return False
     
-    logger.info("DNAAS游戏自动脚本系统安装完成！")
-    logger.info("")
-    logger.info("使用方法:")
-    logger.info("1. 运行示例脚本: .venv\Scripts\python scripts/example.py")
-    logger.info("2. 运行测试: .venv\Scripts\python scripts/example.py test")
-    logger.info("3. 运行主程序: .venv\Scripts\python main.py")
-    logger.info("4. 或者使用start.bat脚本快速启动")
-    logger.info("")
+    logger.info("SAutoScript游戏自动脚本系统安装完成！")
     logger.info("注意事项:")
     logger.info("1. 在Windows上，建议以管理员权限运行脚本")
     logger.info("2. 将游戏截图保存到assets/templates目录作为模板")

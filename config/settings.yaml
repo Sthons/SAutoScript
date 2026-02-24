@@ -1,8 +1,8 @@
-# DNAAS 游戏自动脚本系统配置文件
+# SAutoScript 游戏自动脚本系统配置文件
 
 # 应用程序配置文件
 app:
-  name: "DNAAS - 游戏自动化脚本"
+  name: "SAutoScript - 游戏自动化脚本"
   version: "1.0.0"
   debug: true
   log_level: "DEBUG"
@@ -84,7 +84,7 @@ plugins:
 # 日志配置
 logging:
   level: "INFO"  # 日志级别: DEBUG, INFO, WARNING, ERROR
-  file: "logs/dnaas.log"  # 日志文件路径
+  file: "logs/SAutoScript.log"  # 日志文件路径
   rotation: "10 MB"  # 日志文件轮转大小
   
 # 游戏特定配置
