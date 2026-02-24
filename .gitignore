@@ -1,6 +1,6 @@
 .venv
 core/__pycache__
-logs/errors
+logs/errors/*.log
 assets/templates/mod/entrust
 assets/templates/mod/general
 assets/templates/mod/pause
