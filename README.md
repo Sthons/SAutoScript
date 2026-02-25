@@ -1,6 +1,6 @@
 # SAutoScript - 游戏自动脚本系统
 
-基于图像识别技术的游戏自动脚本系统，支持Windows平台的鼠标键盘仿真输入。
+基于图像识别技术的游戏自动脚本系统（支持使用DirectX的游戏），支持Windows平台的鼠标键盘仿真输入。
 
 ## 功能特点
 
@@ -63,6 +63,7 @@ SAutoScript/
 - **OpenCV**: 用于图像识别和模板匹配
 - **pyautogui**: 提供跨平台的鼠标键盘控制
 - **pywin32**: 直接调用Windows API，提供更底层的控制
+- **pydirectinput**: 基于**pywin32**，针对使用**DirectX**的游戏特化
 - **mss**: 高性能屏幕捕获
 - **PIL (Pillow)**: 图像处理和屏幕捕获
 - **loguru**: 高级日志记录
