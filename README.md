@@ -129,8 +129,8 @@ python examples/example.py
 
 项目提供了详细的使用文档，帮助您快速上手：
 
-- **BaseGameScript 使用指南** (`https://github.com/Sthons/SAutoScript/blob/main/docs/BaseGameScript_Guide.md`): 详细介绍如何使用 BaseGameScript 基类创建游戏自动化脚本，包括核心功能、使用方法和最佳实践。
-- **错误日志记录指南** (`https://github.com/Sthons/SAutoScript/blob/main/docs/Error_Logging_Guide.md`): 介绍项目的错误日志记录功能，包括如何查看和分析错误日志，以及如何在自定义脚本中集成错误记录。
+- **BaseGameScript 使用指南** (`https://github.com/Sthons/SAutoScript/blob/dev/docs/BaseGameScript_Guide.md`): 详细介绍如何使用 BaseGameScript 基类创建游戏自动化脚本，包括核心功能、使用方法和最佳实践。
+- **错误日志记录指南** (`https://github.com/Sthons/SAutoScript/blob/dev/docs/Error_Logging_Guide.md`): 介绍项目的错误日志记录功能，包括如何查看和分析错误日志，以及如何在自定义脚本中集成错误记录。
 
 ## 注意事项
 
