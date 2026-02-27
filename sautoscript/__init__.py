@@ -5,7 +5,7 @@ SAutoScript - 游戏自动脚本系统
 基于图像识别技术的动作游戏自动脚本系统，支持Windows平台的鼠标键盘仿真输入。
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__ = "SAutoScript Team"
 __license__ = "MIT"
 
