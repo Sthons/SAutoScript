@@ -26,14 +26,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import os
-import sys
 from loguru import logger
-
-# 添加核心模块路径
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'core'))
-
-from base_game_script import BaseGameScript
+from sautoscript import BaseGameScript
 
 class MyGameScript(BaseGameScript):
     """自定义游戏脚本"""
