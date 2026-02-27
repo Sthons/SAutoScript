@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "SAutoScript"
-version = "0.1.0"
+dynamic = ["version"]
 description = "基于图像识别技术的自动脚本系统"
 authors = [
     { name = "SAutoScript Team", email = "shiwangwei771@gmail.com" }
@@ -35,3 +35,6 @@ dependencies = [
 [project.urls]
 "Homepage" = "https://github.com/Sthons/SAutoScript"
 "Repository" = "https://github.com/Sthons/SAutoScript"
+
+[tool.setuptools.dynamic]
+version = {attr = "sautoscript.__version__"}
