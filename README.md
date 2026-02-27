@@ -25,7 +25,7 @@ pip install SAutoScript
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/SAutoScript.git
+git clone https://github.com/Sthons/SAutoScript.git
 cd SAutoScript
 
 # 安装依赖
