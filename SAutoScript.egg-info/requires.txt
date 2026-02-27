@@ -1,9 +1,0 @@
-opencv-python
-pyautogui
-pywin32
-pydirectinput
-Pillow
-loguru
-pyyaml
-psutil
-mss

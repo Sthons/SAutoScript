@@ -9,3 +9,4 @@ assets/templates/mapping.json
 scripts/DNA
 test/
 dist/
+SAutoScript.egg-info/
