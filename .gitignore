@@ -8,3 +8,4 @@ assets/templates/map_model.py
 assets/templates/mapping.json
 scripts/DNA
 test/
+dist/
