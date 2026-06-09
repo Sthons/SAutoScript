@@ -106,7 +106,7 @@ class GameOperations:
         logger.debug(f"超时：图像 {template_name} 未消失")
         return False
     
-    def appear_then_click(self, template_name, timeout=None, threshold=None, click_delay=0.5):
+    def appear_then_click(self, template_name, timeout=None, threshold=None, click_delay=0.5, offect_x=0, offect_y=0):
         """等待图像出现并点击
         
         Args:
@@ -114,6 +114,8 @@ class GameOperations:
             timeout: 超时时间(秒)，None表示使用默认值
             threshold: 匹配阈值，None表示使用默认值
             click_delay: 点击后的延迟时间(秒)
+            offect_x: 点击位置x轴偏移量，默认0
+            offect_y: 点击位置y轴偏移量，默认0
             
         Returns:
             bool: 是否成功点击
@@ -147,14 +149,15 @@ class GameOperations:
             # 更新上次点击位置
             self.last_positions[template_name] = result["position"]
             
-            # 点击图像位置
-            x, y = result["position"]
+            # 点击图像位置（加上偏移量）
+            x = result["position"][0] + offect_x
+            y = result["position"][1] + offect_y
             self.input_controller.click(x, y)
             
             # 点击后延迟
             time.sleep(click_delay)
             
-            logger.debug(f"点击图像 {template_name} 位置: ({x}, {y})")
+            logger.debug(f"点击图像 {template_name} 位置: ({x}, {y})，偏移: ({offect_x}, {offect_y})")
             return True
         
         return False
